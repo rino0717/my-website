@@ -1,0 +1,7863 @@
+/* FLOWTから引用　フォント回り要調整20260514 */
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+    font-size: 100%;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+main {
+    display: block;
+    flex: 1 0 auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+a {
+    background-color: transparent;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+sup {
+    top: -.5em;
+}
+
+img {
+    border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button;
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: .35em .75em .625em;
+}
+
+legend {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+@font-face {
+    font-family: YuGothicM;
+    src: local("Yu Gothic Medium");
+}
+
+@font-face {
+    font-family: icons;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/font/icons.eot);
+    src: url(/font/icons.eot?#iefix) format("embedded-opentype"), url(/font/icons.woff) format("woff"), url(/font/icons.ttf) format("truetype");
+}
+
+:root {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+[data-lazy-font] {
+    visibility: hidden;
+}
+
+.wf-active [data-lazy-font] {
+    visibility: visible;
+}
+
+[inert] {
+    cursor: default;
+    pointer-events: none;
+}
+
+[inert],
+[inert] * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+* {
+    -webkit-font-smoothing: auto;
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background-color: #56bcff;
+}
+
+::selection {
+    background-color: #56bcff;
+}
+
+* img {
+    height: auto;
+    vertical-align: top;
+}
+
+:focus-visible {
+    outline: 2px solid #56bcff;
+}
+
+* button:focus-visible,
+* input:focus-visible,
+* select:focus-visible,
+* textarea:focus-visible {
+    outline: 2px solid #56bcff;
+}
+
+* button:focus-visible+label,
+* input:focus-visible+label,
+* select:focus-visible+label,
+* textarea:focus-visible+label {
+    outline: 2px solid #56bcff;
+}
+
+* em {
+    font-style: normal;
+    font-weight: 700;
+}
+
+* :target {
+    --header-height: 70px;
+}
+
+@media (max-width:767px) {
+    * :target:before {
+        content: "";
+        display: block;
+        height: var(--header-height);
+        margin-top: calc(var(--header-height)*-1);
+    }
+}
+
+body {
+    -webkit-font-feature-settings: "palt";
+    font-feature-settings: "palt";
+    color: #222;
+    font-family: Noto Sans JP, YuGothic, YuGothicM, メイリオ, Meiryo, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border-radius: 0;
+}
+
+/* header */
+.c-page-sub__header {
+    grid-area: header;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+}
+
+header.c-header {
+    background: #fff;
+    border-bottom: 1px solid #e6e8ed;
+    left: 0;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.c-header__body {
+    margin: auto;
+    max-width: 1000px;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.c-header__title div,
+.c-header__title h1 {
+    font-size: 1em
+}
+
+.c-header__title a {
+    display: inline-block;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s
+}
+
+@media (hover:hover) {
+    .c-header__title a:hover {
+        opacity: .6
+    }
+}
+
+.c-header__title a img:nth-child(2) {
+    margin-left: 10px
+}
+
+.c-header__title div img.logomark {
+    margin: 0;
+}
+
+.c-header__title div img.logotext {
+    margin-left: 10px;
+}
+
+/* header flow */
+.orpf-flow__bar {
+    width: 100%;
+    height: 1px;
+    background-color: #004979;
+}
+
+.orpf-flow__step {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2faff;
+    padding: 10px;
+}
+
+.orpf-flow__step-current {}
+
+.orpf-flow__step-current-step {
+    font-size: 1rem;
+    color: #004979;
+}
+
+.orpf-flow__step-current-num {
+    font-size: 1.6rem;
+    color: #004979;
+    font-weight: 700;
+}
+
+.orpf-flow__step-current-title {
+    font-size: 1.4rem;
+    color: #004979;
+}
+
+ul.orpf-flow__step-after {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+ul.orpf-flow__step-after li {
+    list-style: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #B2D4EB;
+    padding-left: 32px;
+    position: relative;
+}
+
+ul.orpf-flow__step-after li::before {
+    border: solid rgba(0, 114, 188, .3);
+    border-width: 2px 2px 0 0;
+    content: "";
+    display: block;
+    height: 7px;
+    left: 11px;
+    position: absolute;
+    top: calc(50% - 4.5px);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 7px
+}
+
+ul.orpf-flow__step-after li span {
+    margin-left: 0.25rem;
+}
+
+/* page flow */
+ul.orpf-flow__progress {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    border: 2px solid #004979;
+    min-height: 45px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+ul.orpf-flow__progress,
+ul.orpf-flow__progress>li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+ul.orpf-flow__progress>li {
+    -webkit-box-flex: 1;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    color: #004979;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 4px 0 4px 18px;
+    text-align: center;
+    white-space: nowrap;
+    height: 45px;
+}
+
+ul.orpf-flow__progress>li:first-of-type {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+ul.orpf-flow__progress>li:last-of-type {
+    padding-right: 5px;
+}
+
+ul.orpf-flow__progress>li:not(:last-of-type):after,
+ul.orpf-flow__progress>li:not(:last-of-type):before {
+    border-color: transparent transparent transparent #004979;
+    border-style: solid;
+    border-width: 26px 0 26px 18px;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    right: -17px;
+    top: -3px;
+    width: 0;
+    z-index: 10;
+}
+
+ul.orpf-flow__progress>li:not(:last-of-type):after {
+    border-color: transparent transparent transparent #fff;
+    right: -15px;
+}
+
+ul.orpf-flow__progress>li.orpf-flow__progress-current {
+    background: #004979;
+    color: #fff;
+}
+
+ul.orpf-flow__progress>li.orpf-flow__progress-current:after {
+    display: none;
+}
+
+/* フッター固定料金表示 */
+.orpf-amount-summary__div {
+    --tax-tag-bg-color: #e8f6ff;
+    --simulate-overlay-color: rgba(0, 0, 0, .8);
+    --simulate-table-bg-color: #e8f6ff;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.orpf-amount-summary__div .orpf-div__sub-category .orpf-div__sub-category-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.orpf-div__item {
+    display: flex;
+}
+
+.orpf-div__amount-summary-monthly,
+.orpf-div__amount-summary-initial {
+    display: flex;
+}
+
+/* コンテンツ幅関連 */
+.orpf-div__main-category,
+.orpf-card__div__main-category,
+.orpf-div__div__main-category,
+.orpf-form__div__main-category,
+.orpf-form-main-category__div,
+.orpf-div__rental-router-wifi {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+/* footer */
+.c-page-sub__footer {
+    grid-area: footer;
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+    margin-top: auto;
+}
+
+.c-page-sub__footer.payment_simulate {
+    padding-bottom: 98px;
+}
+
+.c-footer {
+    background: #e6e8ed;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.c-footer+div.shinsa-block {
+    margin-top: 20px;
+}
+
+.c-footer__body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding: 20px;
+    width: 100%;
+}
+
+.c-footer__body p {
+    line-height: 1.8;
+}
+
+.c-footer__body p[role=note] {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+.c-footer__body p+p {
+    margin-top: 10px;
+}
+
+.shinsa-block {
+    background: #e6e8ed;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.shinsa-block--wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    overflow: hidden;
+    padding: 20px 20px 0;
+    width: 100%;
+}
+
+.shinsa-block p.shinsa-num {
+    background-color: #fff;
+    border: 1px solid #e6e8ed;
+    color: #282828;
+    float: right;
+    font-size: 1.2rem;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 120px;
+    min-width: 120px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .shinsa-block p.shinsa-num {
+        float: none;
+        margin-left: auto;
+        max-width: 96px;
+        min-width: 96px;
+        font-size: 0.9rem;
+        padding: 5px 0;
+    }
+
+    .shinsa-block--wrap {
+        padding: 0px;
+    }
+}
+
+.c-footer__copy {
+    display: block;
+    padding: 0 20px 20px;
+    text-align: center;
+    background: #e6e8ed;
+    line-height: 1;
+}
+
+.c-footer-pagetop {
+    bottom: 30px;
+    display: none;
+    position: fixed;
+    right: 30px;
+    z-index: 150;
+}
+
+@media (max-width:767px) {
+    .c-footer-pagetop {
+        bottom: 20px;
+        height: 56px;
+        right: 20px;
+        width: 46px;
+    }
+
+    .c-footer-pagetop img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.c-footer-pagetop[data-fixed-modal=true] {
+    bottom: 15%;
+}
+
+@media (max-width:767px) {
+    .c-footer-pagetop[data-fixed-modal=true] {
+        bottom: 14%;
+    }
+}
+
+/* 次へボタン（決定ボタン）のセンター寄せ */
+/* flex */
+#orpf_id-address-search-confirm__div.orpf-select-dropdown__div__sub-category,
+#orpf_id-address-search-confirm-common__div.orpf-select-dropdown__div__sub-category {
+    align-items: center;
+}
+
+/* block */
+.orpf-div__item-content,
+.orpf-card__div__button-area,
+.orpf-button-group__div__sub-category-container,
+.orpf-div__button-area,
+.orpf-div__bottom.orpf-div__bottom-buttons,
+.orpf_id-next__button__div,
+.orpf-form__div__button-container
+/* orpf-form__div__button-areaと、どちらかで良いはずだがHTMLおかしいので両方選択 */
+,
+.orpf-form__div__button-area
+
+/* 上に同じ */
+,
+.orpf-card-button__div__sub-category-inline,
+.orpf-form-group__div__bottom,
+.orpf-card__div__bottom,
+.orpf-form-bottom-buttons__div,
+.orpf-div__sub-category-content--button,
+#orpf_id-button-container,
+.orpf-div__button,
+.orpf-form__div__page {
+    text-align: center;
+}
+
+#orpf_id-delivery-button-area__button__next,
+#orpf_id-app-confirm-info-button-area__button__next,
+#orpf_id-app-abolish-info-button-area__button__next {
+    justify-content: center;
+}
+
+
+/* 非活性ボタンでもポインタになってしまう部分の修正 */
+button:disabled {
+    cursor: default;
+}
+
+/* 申込PFローディング */
+.orpf-basic-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* 画面下部料金表示 */
+#orpf_id-amount-summary__div.orpf-div__sub-category {
+    background-color: #f9d5cf;
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #e1e5e9;
+    box-shadow: 0 -2px 8px #0000001a;
+    z-index: 1000;
+    margin-bottom: 0;
+    width: 100%;
+    height: 98px;
+}
+
+#orpf_id-amount-summary__div.orpf-div__sub-category .orpf-div__sub-category-container {
+    max-width: 960px;
+    width: 960px;
+    margin: 0 auto;
+    flex-shrink: 0;
+    padding: 0;
+    position: relative;
+}
+
+#orpf_id-amount-summary-total__div.orpf-div__item {
+    display: flex;
+    width: 80%;
+}
+
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-monthly {
+    flex-grow: 1;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+}
+
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-monthly span.orpf-span__title,
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-initial span.orpf-span__title {
+    text-align: center;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    padding: 0 25px;
+    background-color: #3b3b3f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-monthly span.orpf-span__amount,
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-initial span.orpf-span__amount {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    background-color: #fff;
+    flex-grow: 1;
+    text-align: right;
+    padding-right: 10px;
+    min-width: 90px;
+    padding: 0 10px 0 0;
+}
+
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-monthly span.orpf-span__amount span,
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-initial span.orpf-span__amount span {
+    line-height: 50px;
+    text-align: right;
+    margin-left: 6px;
+}
+
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-monthly span.orpf-span__amount span:first-child,
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-initial span.orpf-span__amount span:first-child {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+#orpf_id-amount-summary-total__div.orpf-div__item .orpf-div__amount-summary-initial {
+    flex-grow: 1;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+}
+
+.orpf-amount-summary__div .orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item {
+    margin: 0;
+    display: block;
+}
+
+#orpf_id-amount-summary-button__div.orpf-div__item {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#orpf_id-amount-summary-button__div.orpf-div__item button.orpf-button__normal {
+    background: #0072bc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 24px;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+p.orpf-p__notice {
+    font-size: 9px;
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* モーダル */
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000080;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px #00000026;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 30px 24px;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item {
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    display: block;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item .orpf-div__item-title {
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    color: #1976d2;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item .orpf-div__item-title span.orpf-span__title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #1976d2;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item .orpf-div__item-title span.orpf-span__amount span:first-child {
+    color: #1976d2;
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item .orpf-div__item-title span.orpf-span__amount span:last-child {
+    color: #1976d2;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item .orpf-div__item-content {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 12px;
+    color: #666;
+    padding: 7px 0;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item .orpf-div__item-content span.orpf-span__title,
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item .orpf-div__item-content span.orpf-span__amount {
+    font-weight: 400;
+    font-size: 12px;
+    color: #666;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item .orpf-div__item-content span.orpf-span__amount span:first-child {
+    color: #1976d2;
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+#orpf_id-amount-summary-modal__div.orpf-div__sub-category .orpf-div__sub-category-container .orpf-div__item .orpf-div__item-content span.orpf-span__amount span:last-child {
+    font-weight: 400;
+    font-size: 12px;
+    color: #666;
+}
+
+
+/*-----------ここまで共通　高橋作業--------------------------------------------------------------------*/
+
+/* 共通余白 */
+#orpf_id-internet-card-category__div,
+#orpf_id-option-card-category__div,
+#orpf_id-discount-item__div,
+#orpf_id-hikaritel-content__div,
+#orpf_id-main-category__div,
+#orpf_id-keep-phone-number-sub-category__div,
+#orpf_id-phone-directory-listing-input-radio-box__div,
+#orpf_id-payment-method-category__div,
+#orpf_id-payment-timing-content__div,
+#orpf_id-invoice-recipient-name-content__div,
+#orpf_id-invoice-recipient-address-content__div,
+#orpf_id-delivery-address-and-name__div,
+#orpf_id-tel-numbers-sub-category__div,
+#orpf_id-provider-fee-payment-method-content__div,
+#orpf_id-phone-directory-listing-sub-category__div,
+#orpf_id-delivery-info-input-content__div,
+#orpf_id-sc013,
+#orpf_id-app-confirm-info-content__div,
+#orpf_id-hikari-phone-info__div,
+#orpf_id-customer-info-main-category-container,
+#orpf_id-addsvc-select-main-category-container__div,
+.orpf-card__div__main-category-container,
+sc016-ui003-element,
+sc006-ui001-element,
+sc005-ui001-element {
+    margin-bottom: 50px;
+}
+
+sc016-ui003-element,
+sc006-ui001-element,
+sc005-ui001-element {
+    display: block;
+}
+
+/* 見出し */
+.orpf-header__h2,
+.orpf-header__h3__note,
+.orpf-modal__h2__help,
+.orpf_id-main-title__h2,
+.orpf-form__h2,
+.orpf-header__h2__header,
+.orpf-header__h2__main-category-title,
+.orpf-div__h2,
+.orpf-header__h2__title,
+.orpf-h2__title,
+.c-heading-2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0 0 1px 15px;
+    position: relative;
+}
+
+.orpf-header__h2::before,
+.orpf-modal__h2__help::before,
+.orpf_id-main-title__h2::before,
+.orpf-form__h2::before,
+.orpf-header__h2__header::before,
+.orpf-header__h2__main-category-title::before,
+.orpf-div__h2::before,
+.orpf-header__h2__title::before,
+.orpf-h2__title::before,
+.c-heading-2::before {
+    background: #0072bc;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 3px
+}
+
+/* 見出し2 */
+.orpf-text__h2__note,
+.orpf-header__h3__note,
+.orpf-header__h3,
+.orpf-plan-title,
+.orpf-form__h3,
+.orpf-header__h3__construction-title,
+.orpf-header__h3__sub-category-title,
+.orpf-header__div__sub-category-title,
+.orpf-h3__tittle,
+.orpf-label__div__container
+/* ↑だと他要素にも影響するため、↓が無難？ */
+/* div[id="orpf_id-general-component-label__div__A000001.label1"] */
+
+    {
+    background: #f5f5f5;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 8px 15px 9px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* 必須ラベル */
+.orpf-header__span--required,
+.orpf-header__span__note,
+.orpf-header--required,
+.orpf-span__required-label,
+.orpf-form__span--required,
+.orpf-header__span__required,
+.orpf-badge__required-label,
+.orpf-header__span__label--required,
+.orpf-span__header-required,
+.orpf-span--required {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #d93e2c;
+    color: #d93e2c;
+    padding: 0px 6px 2px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* 重要書類画面の必須ラベル */
+#orpf_id-delivery-address-and-name-title__tag {
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #d93e2c;
+    color: #d93e2c;
+    border-radius: 5px;
+    padding: 0 6px 2px;
+    font-size: 80%;
+    font-weight: 500;
+    line-height: 1.5;
+    left: 200px;
+    top: 11px;
+}
+
+#orpf_id-delivery-desired-date-title__div.orpf-div__sub-category-container {
+    position: relative !important;
+}
+
+#orpf_id-delivery-desired-date-title__tag {
+    position: absolute !important;
+    background-color: #FFFFFF;
+    border: 1px solid #d93e2c;
+    color: #d93e2c;
+    border-radius: 5px;
+    padding: 0 6px 2px;
+    font-size: 80%;
+    font-weight: 500;
+    line-height: 1.5;
+    left: 110px !important;
+    top: 11px !important;
+    margin: 0 !important;
+}
+
+/* 任意ラベル */
+.orpf-span__optional-label {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #0072bc;
+    color: #0072bc;
+    padding: 0px 6px 2px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* ? モーダル：JSで対応後、CSS当てる */
+#orpf_id-provider-help__dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.orpf-header__button__help,
+.orpf-header__question {
+    position: relative;
+    top: 4px;
+    background: url(../public/images/icon-question.svg) 50% no-repeat;
+    background-size: 18px 18px;
+    border: 0;
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    margin-left: 10px;
+    vertical-align: top;
+    width: 18px;
+}
+
+.orpf-modal__dialog__help {
+    background: #fff;
+    border: none;
+    overflow: inherit;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.orpf-modal__button__close {
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    top: -41px;
+    width: 24px;
+}
+
+.orpf-modal__button__close::before {
+    border-bottom: 2px solid #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    right: calc(50% - 17px);
+    top: calc(50% - 1px);
+    width: 34px;
+    transform: rotate(45deg);
+}
+
+.orpf-modal__button__close::after {
+    border-bottom: 2px solid #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    right: calc(50% - 17px);
+    top: calc(50% - 1px);
+    width: 34px;
+    transform: rotate(-45deg);
+}
+
+.orpf-modal__h2__help,
+.orpf-modal__p__text,
+.orpf-modal__p__link {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.orpf-modal__a__link {
+    --link-text-color01: #0072bc;
+    color: var(--link-text-color01);
+    line-height: 1.6;
+    position: relative;
+    text-decoration: underline;
+}
+
+.orpf-modal__a__link[target=_blank]:after {
+    background: url(../public/images/icon-external.svg) no-repeat;
+    background-size: 100% auto;
+    content: "外部リンク";
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: 14px;
+    width: 16px;
+}
+
+/* ？モーダル */
+.c-heading-question {
+    position: relative;
+    top: 4px;
+    background: url(/src/public/images/icon-question.svg) 50% no-repeat;
+    background-size: 18px 18px;
+    border: 0;
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    margin-left: 10px;
+    vertical-align: top;
+    width: 18px;
+}
+
+#orpf_id-checkbox-item-left__div__1_1,
+#orpf_id-checkbox-item-left__div__2_2,
+#orpf_id-checkbox-item-left__div__5_5 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#orpf_id-checkbox-item-left__div__1_1 .orpf-div__checkbox-label,
+#orpf_id-checkbox-item-left__div__2_2 .orpf-div__checkbox-label,
+#orpf_id-checkbox-item-left__div__5_5 .orpf-div__checkbox-label {
+    display: inline-block;
+    width: auto;
+    margin-left: 8px;
+    margin-right: 0;
+    line-height: 1.32;
+}
+
+
+#hikari-hajimewari-cross-modal-open-button,
+#bload-band-router-cross-modal-open-button,
+#Wi-Fi-function-use-modal-open-button,
+#Wireless-LAN-card-modal-open-button {
+    top: auto;
+    margin-right: 10px;
+    margin-bottom: -3px;
+}
+
+#sc006-hikari-tel-modal-text p {
+    font-size: 1.5rem;
+}
+
+#orpf_id-main-title_h2 #injected-sc006-element-orpf_id-main-title__h2-hikari-tel-modal {
+    display: inline-flex;
+    align-items: center;
+}
+
+#hikari-tel-modal-open-button {
+    top: 0;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+#orpf_id-email-notice__div__space {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+#orpf_id-email-notice__div__space>span:nth-of-type(n+2) .orpf-form-group__p__note {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.content_mLR16 {
+    margin: 0 16px;
+}
+
+.c-grid {
+    --margin-bottom: 0;
+    --margin-bottom-sp: 0;
+    --gap: 20px;
+    --gap-sp: 20px;
+    grid-gap: var(--gap) 0;
+    display: -ms-grid;
+    display: grid;
+    gap: var(--gap) 0;
+    margin-bottom: var(--margin-bottom);
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.c-grid[data-grid-style=col-2] {
+    --width: 50% 50%;
+    --width-sp: 100%;
+    -ms-grid-columns: var(--width);
+    grid-template-columns: var(--width);
+}
+
+.op3_modal_text {
+    display: flex;
+    align-items: center;
+}
+
+.c-grid .c-grid__item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.c-image {
+    --width: 100%;
+    --width-sp: 100%;
+    --margin-bottom: 20px;
+    --margin-bottom-sp: 20px;
+    display: inline-block;
+    margin-bottom: var(--margin-bottom);
+    max-width: var(--width);
+    width: 100%;
+}
+
+.c-image img {
+    height: auto;
+    width: 100%;
+}
+
+/* .link-style-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #0000ee;
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+} */
+
+/* モーダル */
+.orpf-div__dialog[hidden],
+.orpf-modal__div__dialog[hidden] {
+    display: none;
+}
+
+:where(sc017-element) div[hidden] {
+    display: none !important;
+}
+
+.orpf-div__dialog,
+.orpf-form-modal__div.show,
+.orpf-modal__div__dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000080;
+    z-index: 1000;
+}
+
+.orpf-div__dialog-outer,
+.orpf-form-modal-container__div,
+.orpf-modal__div__outer,
+.orpf-modal__div__dialog-outer {
+    border: none;
+    overflow: inherit;
+    position: fixed;
+    width: 100%;
+    max-width: 700px;
+    padding: 0;
+    align-items: center;
+}
+
+.orpf-div__dialog-inner,
+.orpf-form-modal-container__div,
+.orpf-modal__div__inner,
+.orpf-modal__div__dialog-inner {
+    background: #fff;
+    box-shadow: 0 10px 40px #0000004d;
+    overflow: hidden;
+}
+
+.orpf-div__dialog-content,
+.orpf-form-modal-content__div,
+.orpf-modal__div__content,
+.orpf-modal__div__dialog-content {
+    padding: 30px 25px;
+    background-color: #fff;
+}
+
+.orpf-div-loading-dialog-message-content__div,
+.orpf-div__loading-dialog-message-content,
+.orpf-form-modal-description__div,
+#orpf_id-credit-confirm-message__p,
+.orpf-modal__div__message-content,
+.orpf-modal__div__loading-dialog-message {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.orpf-div-loading-dialog-actions__div,
+.orpf-div__loading-dialog-actions,
+.orpf-message-dialog-buttons,
+.orpf-form-flex-container__div,
+.orpf-modal__div__actions,
+.orpf-form-group__div__loading-dialog-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.orpf-dialog-button__confirm,
+.orpf-dialog-button__cancel,
+.orpf-button__dialog-button__confirm,
+.orpf-button__dialog-button__cancel,
+.orpf-form-modal-yes-button__button,
+.orpf-form-modal-no-button__button,
+.orpf-button__button__confirm,
+.orpf-button__button__cancel,
+.orpf-button__button__dialog-confirm,
+.orpf-button__button__dialog-cancel {
+    min-width: 120px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    text-decoration: none;
+}
+
+.orpf-dialog-button__confirm,
+.orpf-button__dialog-button__confirm,
+.orpf-form-modal-yes-button__button,
+.orpf-button__button__confirm,
+.orpf-button__button__dialog-confirm {
+    background: orange;
+}
+
+.orpf-dialog-button__cancel,
+.orpf-button__dialog-button__cancel,
+.orpf-form-modal-no-button__button,
+.orpf-button__button__cancel,
+.orpf-button__button__dialog-cancel {
+    background: #666;
+}
+
+
+/* モーダル2 */
+.orpf-form-modal__div {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000080;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* モーダル3 */
+.c-heading-3 {
+    color: #004979;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    padding: 0;
+}
+
+.c-list-dot {
+    ---list-dot-color: #222;
+    --margin-bottom: 20px;
+    --margin-bottom-sp: 20px;
+    list-style: none;
+    margin: 0;
+    margin-bottom: var(--margin-bottom);
+    padding: 0;
+    line-height: 1.1;
+}
+
+.c-list-dot>li {
+    line-height: 1.6;
+    list-style: none;
+    margin: 0;
+    padding-left: 1.1em;
+    position: relative;
+    font-size: 84%;
+}
+
+.c-list-dot>li:before {
+    background: var(---list-dot-color);
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    left: 0;
+    margin-left: 4px;
+    position: absolute;
+    top: 0.6em;
+    vertical-align: middle;
+    width: 6px;
+}
+
+.c-link-text {
+    --link-text-color01: #0072bc;
+    color: var(--link-text-color01);
+    line-height: 1.6;
+    position: relative;
+    text-decoration: underline;
+}
+
+.c-link-text:after {
+    background: url(../img/icon-external.svg) no-repeat;
+    background-size: 100% auto;
+    content: "外部リンク";
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: 14px;
+    width: 16px;
+}
+
+/* 次へ ボタン */
+.orpf-button-group__div__sub-category {
+    margin-bottom: 100px;
+}
+
+#orpf_id-address-search-postcode__button {
+    appearance: none;
+    background: #0072bc;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.8;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.orpf-button__next,
+.orpf-button__button__next,
+.orpf-button__button--primary,
+.orpf-button-group__button__next,
+.orpf-button__primary,
+.orpf-button__submit,
+.orpf-button--primary,
+.orpf-form-button-primary__button,
+.orpf-button__button__sub-category-inline {
+    appearance: none;
+    background: #004979;
+    border: 2px solid #004979;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding: 21px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    max-width: 600px;
+}
+
+.orpf-button__next::after,
+.orpf-button-group__button__next::after,
+#orpf_id-address-search-confirm__button::after,
+.orpf-button__primary::after,
+.orpf-button__submit::after,
+.orpf-button--primary::after,
+.orpf-form-button-primary__button::after,
+.orpf-button__button__next::after,
+.orpf-button__button__sub-category-inline::after {
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 12px;
+    margin: auto;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 12px;
+}
+
+/* 非活性ボタン */
+.orpf-button-group__div__sub-category-container button[disabled],
+.orpf-button__button__next[disabled],
+.orpf-button__next[disabled],
+.orpf-button--primary[disabled],
+.orpf-button__button__sub-category-inline[disabled] {
+    appearance: none;
+    background: #d0d0d0;
+    border: 2px solid #d0d0d0;
+    color: #adadad;
+}
+
+.orpf-button-group__div__sub-category-container button[disabled]::after,
+.orpf-button__button__next[disabled]::after,
+.orpf-button__next[disabled]::after,
+.orpf-button--primary[disabled]::after,
+.orpf-button__button__sub-category-inline[disabled]::after {
+    border-right-color: #adadad;
+    border-top-color: #adadad;
+}
+
+/* 戻る リンクボタン */
+.orpf-a__back,
+.orpf-button__a__back,
+.orpf-button-group__button__back,
+.orpf-link__back,
+.orpf-form__a--secondary,
+.orpf-form-a-secondary__a,
+.orpf-button__button__back,
+.orpf-card__a__sub-category-inline,
+#orpf_id-address-search-map-cancel__button,
+.orpf-button__back {
+    border: none;
+    text-decoration: underline;
+    padding: 0px 30px;
+    appearance: none;
+    background: none;
+    border-radius: 8px;
+    color: #0072bc;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.orpf-button__a__back::after,
+.orpf-button-group__button__back::after,
+.orpf-form__a--secondary::after,
+.orpf-form-a-secondary__a::after,
+.orpf-button__button__back::after,
+.orpf-card__a__sub-category-inline::after,
+.orpf-link__back::after,
+#orpf_id-address-search-map-cancel__button::after,
+.orpf-button__back::after {
+    border-bottom: 2px solid #0072bc;
+    border-left: 2px solid #0072bc;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 8px;
+    left: 15px;
+    margin: auto;
+    position: absolute;
+    top: 2px;
+    transform: rotate(45deg);
+    width: 8px;
+}
+
+/* 注釈 */
+#orpf_id-address-search-title-common__div-space {
+    display: flex;
+    align-items: center;
+    border: 1px solid #F4AD16;
+    padding-left: 13px;
+    margin-bottom: 20px;
+}
+
+#orpf_id-address-search-title-common__div-space:before {
+    content: "";
+    display: inline-block;
+    background: url(../img/ic_info.svg) no-repeat left center;
+    position: relative;
+    top: -2px;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    margin-right: 8px;
+}
+
+#orpf_id-address-search-title-common__div-space a,
+.area-expansion-annotation a {
+    color: #0072bc;
+}
+
+#orpf_id-address-search-title-common__div-space .c-annotation-link-text a:after {
+    background: url(../img/icon-external.svg) no-repeat;
+    background-size: 100% auto;
+    content: "外部リンク";
+    display: inline-block;
+    font-size: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 16px;
+    width: 16px;
+    vertical-align: 13px;
+}
+
+#orpf_id-address-search-postcode-input-title__div-space {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0 0 1.5em;
+}
+
+#orpf_id-address-search-pref-trigger__div-space {
+    margin: 0 16px 30px;
+}
+
+#orpf_id-internet-card-sub-category-content__div-space {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border: 1px solid #F4AD16;
+    padding: 12px 13px;
+    margin: 20px 16px;
+}
+
+#orpf_id-internet-card-sub-category-content__div-space::before {
+    content: "";
+    display: inline-block;
+    background: url(../img/ic_info.svg) no-repeat left center;
+    background-size: contain;
+    position: relative;
+    top: 2px;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+#orpf_id-internet-card-sub-category-content__div-space .area-expansion-annotation {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+#orpf_id-internet-card-sub-category-content__div-space [id*="text-2"],
+#orpf_id-internet-card-sub-category-content__div-space [id*="text-3"] {
+    display: block !important;
+    width: auto;
+    flex-basis: calc(100% - 40px);
+    margin-left: 40px;
+}
+
+
+#orpf_id-internet-card-sub-category-content__div-space [id*="text-4"] {
+    display: block !important;
+    width: auto;
+    flex-basis: calc(100% - 40px);
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-cross-area-expansion-link-text-2 .area-expansion-annotation,
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-cross-area-expansion-link-text-3,
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-cross-area-expansion-link-text-3 .area-expansion-annotation {
+    display: inline;
+    margin-left: 40px;
+}
+
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-cross-area-expansion-link-text-1 .area-expansion-annotation {
+    display: block;
+    flex: 1;
+    min-width: 200px;
+    margin-top: 3px;
+}
+
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-cross-area-expansion-link-text-2 {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+}
+
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-cross-area-expansion-link-text-2 .area-expansion-annotation,
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-cross-area-expansion-link-text-3,
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-cross-area-expansion-link-text-3 .area-expansion-annotation {
+    display: inline;
+    margin-left: 40px;
+}
+
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-cross-area-expansion-link-text-3 .area-expansion-annotation a,
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-area-cross-expansion-link-text-4 .area-expansion-annotation a {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+#injected-orpf_id-internet-card-sub-category-content__div-space-sc002-area-cross-expansion-link-text-4 {
+    display: block !important;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+#orpf_id-internet-card-sub-category-content__div-space .area-expansion-annotation a:after {
+    background: url(../img/icon-external.svg) no-repeat center center;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 14px;
+    width: 14px;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+#orpf_id-internet-service-notice__div-space {
+    margin: 0 16px 30px;
+    font-size: 1.3rem;
+}
+
+
+#available-area-modal-modal-open-text-button,
+#orpf_id-plan-info__div__3104-space .orpf-header__note a {
+    line-height: 1.6;
+    padding: 0;
+    position: relative;
+    text-decoration: underline;
+    border: none;
+    background: none;
+    color: #0072bc;
+    cursor: pointer;
+}
+
+#available-area-modal-modal-open-text-button:after {
+    background: url(../img/icon-modal.svg) no-repeat;
+    background-size: 100% auto;
+    border: none;
+    content: "モーダルを開く";
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    width: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    -webkit-transform: none;
+    transform: none;
+    vertical-align: 13px;
+    cursor: pointer;
+}
+
+.c-modal dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.c-modal {
+    margin-bottom: 0;
+}
+
+.c-modal dialog {
+    background: #fff;
+    border: none;
+    overflow: inherit;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 700px;
+    padding: 0;
+}
+
+.c-modal__inner {
+    background: #fff;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 20px;
+    margin: 16px;
+}
+
+.c-modal__close-outside {
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    top: -41px;
+    width: 24px;
+}
+
+.c-modal__close-outside:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.c-modal__close-outside:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.c-modal__close-outside:after,
+.c-modal__close-outside:before {
+    border-bottom: 2px solid #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    right: calc(50% - 17px);
+    top: calc(50% - 1px);
+    width: 34px;
+}
+
+#sc001-available-area-modal-modal-text .c-heading-1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+dl.prefectures_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+}
+
+dl.prefectures_list dd {
+    width: 60px;
+    margin: 0;
+}
+
+dl.prefectures_list dt {
+    width: calc(100% - 60px);
+    margin: 0;
+}
+
+#sc001-available-area-modal-modal-text a {
+    --link-text-color01: #0072bc;
+    color: var(--link-text-color01);
+    line-height: 1.6;
+    position: relative;
+    text-decoration: underline;
+}
+
+.list_num ul {
+    padding: 0;
+}
+
+.list_num li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+
+#injected-orpf_id-plan-info__div__3104-space-sc006-free-not-applicable-tell .orpf-header__note {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+#injected-orpf_id-plan-info__div__3104-space-sc006-free-not-applicable-tell .orpf-header__note a {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    color: #0072bc;
+}
+
+#injected-orpf_id-plan-info__div__3104-space-sc006-free-not-applicable-tell .orpf-header__note a:after {
+    background: url(../img/icon-external.svg) no-repeat center center;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 14px;
+    width: 14px;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+#orpf_id-keep-phone-number-input-radio-box__div-space,
+#orpf_id-keep-phone-number-sub-category-content__div-space {
+    margin: 0 16px;
+    font-size: 1.5rem;
+}
+
+#injected-orpf_id-keep-phone-number-input-radio-box__div-space-sc012-continuation-case-annotation-1 .orpf-form-group__p__note {
+    color: #0072bc;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+}
+
+/* #injected-orpf_id-keep-phone-number-input-radio-box__div-space-sc012-continuation-case-annotation-1 .orpf-form-group__p__note:after {
+    background: url(../img/icon-external.svg) no-repeat center center;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 14px;
+    width: 14px;
+    flex-shrink: 0;
+    vertical-align: middle;
+} */
+
+#orpf_id-app-confirm-info-attention-bottom-detail__div-space {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+#orpf_id-app-confirm-info-attention__div__content-space .orpf-form-group__p__note {
+    text-align: center;
+    margin: 40px 0;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.orpf-header__note {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+#orpf_id-plan-info__div__3104-space .orpf-header__note:after {
+    background: url(../img/icon-external.svg) no-repeat;
+    background-size: 100% auto;
+    content: "外部リンク";
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: 14px;
+    width: 16px;
+}
+
+#continuation-case-modal-open-text-button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: #0072bc;
+    display: inline-block;
+    text-indent: 0;
+    text-decoration: underline;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* デフォルトデザイン無効化 */
+.orpf-sort__input__asc,
+.orpf-sort__input__desc,
+.orpf-sort__input__clear,
+.orpf-filter__input__free,
+.orpf-filter__input__discount,
+.orpf-filter__input__support,
+.orpf-plan-radio,
+.orpf-option-checkbox,
+.orpf-set-option-checkbox,
+.orpf-div__checkbox,
+.orpf-card__radio,
+.orpf-input-radio-box__input,
+.orpf-dialog-button__close,
+.orpf-form-input-radio-box__input,
+.orpf-input-radio-box__input__selection,
+.orpf-agreement-checkbox__input__sub-category-inline,
+#orpf_id-delivery-modal-area__div,
+.orpf-input__radio,
+#orpf_id-building-demolition__input,
+#orpf_id-service-switch__input,
+.orpf-select-dropdown__span__note-img,
+.h-text-center,
+.orpf-checkbox__input,
+.orpf-checkbox__span__tooltip-text,
+.orpf-checkbox__span__tooltip-icon {
+    appearance: none;
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+}
+
+/* ---------------------------- */
+/* 提供エリア画面 */
+#orpf_id-address-search-postcode__div {
+    margin-left: 15px;
+    margin-right: -15px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#orpf_id-address-search-postcode__label.orpf-badge__label__title {
+    color: #0072bc;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-right: 16px;
+}
+
+#orpf_id-address-search-postcode__input.orpf-form__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #0072bc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    line-height: 1.5;
+    padding: 8px 12px;
+    font-size: 16px;
+    height: 65px;
+    min-width: 0;
+    width: 180px;
+    background: #fff;
+    margin-right: 25px;
+}
+
+#orpf_id-address-search-postcode__button {
+    appearance: none;
+    background: #0072bc;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.8;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    --width: 240px;
+    display: inline-block;
+    margin-bottom: var(--margin-bottom);
+    max-width: var(--width);
+    width: 100%;
+    height: 65px;
+}
+
+#orpf_id-address-search-pref-trigger__button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    max-width: 100%;
+}
+
+#orpf_id-address-search-pref-trigger__span__text.orpf-badge__span__note-text {
+    text-decoration: underline;
+}
+
+#orpf_id-address-search-pref-trigger__span__text,
+#orpf_id-address-search-pref-trigger__span__img {
+    word-break: break-word;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0 5px 0 0;
+    background: transparent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100%;
+    font-family: Noto Sans JP, YakuHanJP, sans-serif;
+    background-color: transparent;
+    color: #0072bc;
+    display: inline;
+    line-height: 1.6;
+    position: relative;
+}
+
+#orpf_id-address-search-confirm-dialog-container__div,
+#orpf_id-address-search-no-input-dialog-container__div {
+    background: #fff;
+    opacity: 1;
+    color: #222;
+    filter: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    min-width: 400px;
+    max-width: 90vw;
+    z-index: 2000;
+    box-shadow: 0 4px 16px #00000026;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#orpf_id-address-search-confirm-dialog-title__p,
+#orpf_id-address-search-no-input-dialog-title__p {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+#orpf_id-address-search-confirm-dialog__p {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+#orpf_id-address-search-confirm-dialog__button__yes,
+#orpf_id-address-search-no-input-dialog__button__ok {
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: background .2s, color .2s;
+    background: #1976d2;
+    color: #fff;
+}
+
+#orpf_id-address-search-confirm-dialog__button__no {
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: background .2s, color .2s;
+    background: #fff;
+    color: #1976d2;
+    border: 1.5px solid #1976d2;
+}
+
+/* #orpf_id-address-search-dropdown-main__div,
+#orpf_id-address-search-dropdown-container__div,
+#orpf_id-address-search-dropdown__div {
+    position: relative;
+    z-index: 50;
+} */
+
+.orpf-select-dropdown__div__sub-category,
+#orpf_id-address-search-map-open__div {
+    margin: 0 16px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.orpf-select-dropdown__div__content {
+    position: relative;
+    width: 400px;
+    cursor: pointer;
+}
+
+
+#orpf_id-address-search-banchigo__div .orpf-select-dropdown__div__content,
+#orpf_id-address-search-map-open-banchigo__div .orpf-select-dropdown__input {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.orpf-select-dropdown__input:disabled,
+.orpf-select-dropdown__input:read-only,
+.orpf-input-text__input--input-mode:disabled,
+.orpf-input-text__input--input-mode:read-only {
+    border: 2px solid #d0d0d0;
+    background: linear-gradient(to right, #fff calc(100% - 40px), #d0d0d0 calc(100% - 40px));
+    color: #888;
+}
+
+.orpf-select-dropdown__input {
+    width: 100%;
+    padding: 12px 36px 12px 12px;
+    border: 2px solid #0072bc;
+    background: linear-gradient(to right, #fff calc(100% - 35px), #0072bc calc(100% - 35px));
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+#orpf_id-address-search-map-open__input,
+#orpf_id-address-search-map-open-banchi__input,
+#orpf_id-address-search-map-open-gou__input,
+#orpf_id-address-search-map-open-edaban__input,
+#orpf_id-address-search-map-open-building1__input,
+#orpf_id-address-search-map-open-building2__input,
+#orpf_id-address-search-map-open-building3__input {
+    width: 100%;
+    padding: 12px 36px 12px 12px;
+    border: 2px solid #0072bc;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+#orpf_id-address-search-map-open__input:disabled,
+#orpf_id-address-search-map-open-banchi__input:disabled,
+#orpf_id-address-search-map-open-gou__input:disabled,
+#orpf_id-address-search-map-open-edaban__input:disabled,
+#orpf_id-address-search-map-open-building1__input:disabled,
+#orpf_id-address-search-map-open-building2__input:disabled,
+#orpf_id-address-search-map-open-building3__input:disabled {
+    border: 2px solid #d0d0d0;
+    cursor: default;
+}
+
+#orpf_id-address-search-banchi-dropdown__div:after,
+#orpf_id-address-search-gou-dropdown__div:after,
+#orpf_id-address-search-edaban-dropdown__div:after,
+#orpf_id-address-search-map-open-banchi__input:after {
+    border: 2px solid #fff;
+    border-bottom: 0;
+    border-left: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 11px;
+    left: 93%;
+    line-height: 1;
+    position: absolute;
+    top: calc(50% - 2px);
+    transform: translateY(-50%) translateX(-50%) rotate(-225deg);
+    vertical-align: middle;
+    width: 11px;
+    cursor: pointer;
+}
+
+#orpf_id-address-search-dropdown__div:after,
+#orpf_id-address-search-building1-dropdown__div__select:after,
+#orpf_id-address-search-building2-dropdown__div__select:after,
+#orpf_id-address-search-building3-dropdown__div:after,
+#orpf_id-address-search-pref-dropdown__div:after {
+    border: 2px solid #fff;
+    border-bottom: 0;
+    border-left: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 11px;
+    left: 95%;
+    line-height: 1;
+    position: absolute;
+    top: calc(50% - 2px);
+    transform: translateY(-50%) translateX(-50%) rotate(-225deg);
+    vertical-align: middle;
+    width: 11px;
+    cursor: pointer;
+}
+
+.orpf-list__ul {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: #fff;
+    border: 2px solid #0072bc;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0 4px 16px #00000014;
+}
+
+#orpf_id-address-search-banti-dropdown__ul,
+#orpf_id-address-search-gou-dropdown__ul,
+#orpf_id-address-search-edaban-dropdown__ul {
+    z-index: 44;
+}
+
+li {
+    list-style: none;
+}
+
+.orpf-list-item__li {
+    padding: 12px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.orpf-list-item__li:hover,
+.orpf-list-item__li:active {
+    background: #e6f2fb;
+}
+
+#orpf_id-address-search-banti-noaddress__li,
+#orpf_id-address-search-gou-noaddress__li,
+#orpf_id-address-search-edaban-noaddress__li,
+#orpf_id-address-search-building1-noaddress__li,
+#orpf_id-address-search-building2-noaddress__li,
+#orpf_id-address-search-building3-noaddress__li {
+    color: #1976d2;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.orpf-pagination__div__sub-category {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px 16px;
+    box-sizing: border-box;
+    position: relative;
+    border-top: 1px solid #ddd;
+    background: #f2f2f2;
+}
+
+.orpf-pagination__div__sub-category>button:first-child {
+    margin-right: auto;
+}
+
+.orpf-pagination__div__sub-category>button:last-child {
+    margin-left: auto;
+}
+
+.orpf-pagination__button--prev.disabled,
+.orpf-pagination__button--next.disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    color: #fff;
+    background-color: #555;
+    border: none;
+}
+
+.orpf-pagination__button--next,
+.orpf-pagination__button--prev {
+    padding: 8px 16px;
+    background: #0072bc;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .2s ease;
+    border: none;
+    min-width: auto;
+    width: auto;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.orpf-pagination__div__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    pointer-events: none;
+}
+
+.orpf-pagination__div__note--info {
+    font-weight: 700;
+    color: #0072bc;
+    font-size: 16px;
+    padding: 0 8px;
+}
+
+#orpf_id-address-search-banchigo-main__div {
+    margin-bottom: 50px;
+}
+
+#orpf_id-address-search-banchigo__div.orpf-select-dropdown__div__sub-category-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 10px;
+    align-items: end;
+    position: relative;
+    z-index: 40;
+    margin: 0 16px;
+}
+
+#orpf_id-address-search-map-notice__p {
+    margin: 0;
+}
+
+#orpf_id-address-search-map-open-banchigo__div {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 10px;
+    align-items: end;
+    position: relative;
+    z-index: 40;
+}
+
+#orpf_id-address-search-banchigo__div>#orpf_id-address-search-banchi__label,
+#orpf_id-address-search-banchigo__div>#orpf_id-address-search-gou__label,
+#orpf_id-address-search-banchigo__div>#orpf_id-address-search-edaban__label,
+#orpf_id-address-search-map-open-banchigo__div>.orpf-badge__label__title {
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 0;
+    grid-row: 1;
+}
+
+#orpf_id-address-search-banchigo__div>.orpf-select-dropdown__div__content,
+#orpf_id-address-search-map-open-banchigo__div>cp101-ui005-01-element {
+    grid-row: 2;
+}
+
+.orpf-separator__span__note-img {
+    color: #222;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 10px;
+    grid-row: 1 / 3;
+    padding-bottom: 15px;
+}
+
+/* ---------------------------- */
+/* 通知必要事項入力画面 */
+#orpf_id-personal-corporate__div__select {
+    margin-top: 2px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.orpf-input-radio-box-container__div {
+    flex: 1;
+}
+
+.orpf-input-radio-box-container__div .orpf-input-radio-box__label {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 48px;
+    position: relative;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.orpf-input-radio-box-container__div .orpf-input-radio-box__label:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: 22px;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    width: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.orpf-input-radio-box-container__div:has(.orpf-input-radio-box__input:checked) .orpf-input-radio-box__label:after {
+    content: "";
+    position: absolute;
+    background: #0072bc;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    top: 26px;
+    left: 23.5px;
+    z-index: 3;
+    pointer-events: none;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+
+.orpf-input-radio-box-container__div .orpf-input-radio-box__label:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-input-radio-box-container__div:has(.orpf-input-radio-box__input:checked) .orpf-input-radio-box__label {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-input-radio-box-container__div .orpf-input-radio-box__label:hover:before {
+    border-color: #0072bc;
+}
+
+.orpf-input-radio-box-container__div:has(.orpf-input-radio-box__input:checked) .orpf-input-radio-box__label:before {
+    border-color: #0072bc;
+}
+
+#orpf_id-personal__div__frame-container,
+#orpf_id-contact__div__frame-container,
+#orpf_id-corporate__div__frame-container {
+    margin: 0 16px;
+}
+
+#orpf_id-personal-name__label,
+#orpf_id-personal-name-kana__label,
+#orpf_id-contact-phone__label,
+#orpf_id-contact-email__label,
+#orpf_id-contact-email-confirm__label,
+#orpf_id-corporate-name__label,
+#orpf_id-corporate-name-kana__label,
+#orpf_id-department-name__label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+#orpf_id-personal-name__input,
+#orpf_id-personal-name-kana__input,
+.orpf-input-text__div__phone-container .orpf-input-text__input,
+#orpf_id-contact-email__input,
+#orpf_id-contact-email-confirm__input,
+#orpf_id-corporate-name__input,
+#orpf_id-corporate-name-kana__input,
+#orpf_id-department-name__input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 100%;
+    line-height: 1.5;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color .3s ease;
+    margin-bottom: 20px;
+}
+
+#orpf_id-contact-phone__div__input {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.orpf-input-text__span__separator {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    line-height: 1;
+}
+
+/* ---------------------------- */
+/* 通知必要事項確認画面 */
+
+
+/* ---------------------------- */
+/* 通知必要事項完了画面 */
+#orpf_id-address-completed__div__guidance-label {
+    margin: 10% auto;
+    width: fit-content;
+    line-height: 1.4;
+}
+
+
+/* ---------------------------- */
+/* サービス選択画面 */
+#orpf_id-service-select__div .orpf-div__portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#orpf_id-service-select__div .orpf-cards__div__title {
+    font-size: 150%;
+    font-weight: 700;
+    display: block;
+    width: auto;
+    word-break: break-word;
+    padding-right: 90px;
+}
+
+.orpf-div__sub-category-content .orpf-input-radio-box__div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+    gap: 48px;
+}
+
+.orpf-div__sub-category-content .orpf-input-checkbox-box__div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+    gap: 48px;
+    margin: 0 16px;
+}
+
+#orpf_id-service-select__div .orpf-input-radio-box__div .space-area {
+    display: none;
+}
+
+#orpf_id-service-select__div .orpf-input-checkbox-box__container {
+    position: relative;
+}
+
+#orpf_id-service-select__div .orpf-cards__div__tag {
+    font-size: 70%;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    display: inline-block;
+    margin-right: 8px;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 86px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#orpf_id-service-select__div .orpf-cards__div__tag--available {
+    background: #fff;
+    color: #004979;
+    border: 2px solid #004979;
+}
+
+#orpf_id-service-select__div .orpf-cards__div__speed {
+    font-size: 90%;
+    width: 100%;
+}
+
+#orpf_id-service-select__div .orpf-cards__div__speed:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 18px 0;
+}
+
+#orpf_id-service-select__div .orpf-cards__span__speed-value {
+    color: #004979;
+    font-size: 110%;
+    font-weight: 700;
+}
+
+#orpf_id-service-select__div .orpf-cards__div__type {
+    font-size: 90%;
+    color: #333;
+    font-weight: 400;
+}
+
+#orpf_id-service-select__div .orpf-cards__div__monthly-fee {
+    font-weight: 700;
+    font-size: 100%;
+}
+
+#orpf_id-internet-service-card-contents__div__502,
+#orpf_id-internet-service-card-contents__div__149 {
+    cursor: pointer;
+}
+
+#orpf_id-internet-service__div .orpf-input-radio-box__container.orpf-div__cards,
+#orpf_id-service-select__div .orpf-input-checkbox-box__label {
+    flex: 1;
+    min-width: 0;
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 55px;
+    position: relative;
+    background: #fff;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+#orpf_id-internet-service__div .orpf-input-radio-box__container.orpf-div__cards:hover,
+#orpf_id-service-select__div .orpf-input-checkbox-box__label:hover {
+    border-color: #0072bc;
+    background: #f2faff;
+}
+
+#orpf_id-internet-service__div .orpf-input-radio-box__container.orpf-div__cards:has(.orpf-input-radio-box__input:checked) {
+    border-color: #0072bc;
+    background: #f2faff;
+}
+
+#orpf_id-service-select__div .orpf-input-checkbox-box__input:checked+.orpf-input-checkbox-box__label {
+    border-color: #0072bc;
+    background: #f2faff;
+}
+
+#orpf_id-service-select__div .orpf-input-radio-box__label:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 34px;
+    left: 14px;
+    position: absolute;
+    top: 55px;
+    transition: border-color .3s ease;
+    width: 34px;
+    cursor: pointer;
+}
+
+#orpf_id-internet-service__div .orpf-input-radio-box__container.orpf-div__cards:hover .orpf-cards__label:before,
+#orpf_id-service-select__div .orpf-input-checkbox-box__label:hover:before {
+    border-color: #0072bc;
+}
+
+#orpf_id-internet-service__div .orpf-input-radio-box__container.orpf-div__cards:has(.orpf-input-radio-box__input:checked) .orpf-cards__label:before {
+    border-color: #0072bc;
+}
+
+#orpf_id-service-select__div .orpf-input-checkbox-box__input:checked+.orpf-input-checkbox-box__label:before {
+    border-color: #0072bc;
+}
+
+#orpf_id-service-select__div .orpf-input-radio-box__input:checked+label:after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    transition: background-color .3s ease;
+    height: 26px;
+    width: 26px;
+    top: 59px;
+    left: 18px;
+}
+
+#orpf_id-option-service-option__input__1 {
+    appearance: none;
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+}
+
+#orpf_id-service-select__div .orpf-input-checkbox-box__label:before {
+    border: 2px solid #adadad;
+    border-radius: 4px;
+    content: "";
+    height: 42px;
+    top: 46px;
+    left: 20px;
+    position: absolute;
+    top: 46px;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    width: 42px;
+}
+
+#orpf_id-service-select__div .orpf-input-checkbox-box__input:checked+label:before {
+    background: #0072bc;
+    border-color: #0072bc;
+}
+
+#orpf_id-service-select__div .orpf-input-checkbox-box__input:checked+label:after {
+    background: url(../public/images/icon-check.svg) no-repeat 50% / contain;
+    content: "";
+    height: 32px;
+    left: 25px;
+    position: absolute;
+    top: 50px;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    width: 32px;
+}
+
+#orpf_id-service-select__div .orpf-div__notice {
+    margin: 0 16px 0;
+    font-size: small;
+}
+
+#effective-speed-explanation-link-modal-open-text-button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: #0072bc;
+    display: inline-block;
+    line-height: 1.6;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    text-align: left;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#effective-speed-explanation-link-modal-open-text-button:after {
+    background: url(../img/icon-external.svg) no-repeat center center;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 14px;
+    width: 14px;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+#orpf_id-service-select__div .orpf-input-checkbox-box__label {
+    border: 2px solid #adadad;
+    background: #fff;
+    border-radius: 8px;
+    display: block;
+    padding: 20px 20px 20px 55px;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-weight: 600;
+}
+
+#orpf_id-service-select__div #orpf_id-option-cards-contents__div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#orpf_id-service-select__div #orpf_id-option-cards-title__div {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    font-size: 90%;
+    color: #0072bc;
+}
+
+#orpf_id-service-select__div #orpf_id-option-cards-type__div {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 130%;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    align-self: center;
+}
+
+#orpf_id-service-select__div #orpf_id-option-cards-icon__img {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    align-self: center;
+    width: 85px;
+    height: 85px;
+    margin: 0;
+}
+
+.orpf-notice__p__line,
+.orpf-notice__p__line.orpf-notice__p__line--warn,
+.effective-speed-explanation {
+    margin: 0;
+}
+
+.orpf-notice__span__emphasis,
+.orpf-notice__p__line--warn {
+    color: #db3d23;
+}
+
+#orpf_id-next-button-item-content__div-space {
+    text-align: center;
+}
+
+/* ---------------------------- */
+/* 割引サービス画面 */
+.orpf-service-info__div__sub-category {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.orpf-service-info__table__sub-category {
+    display: table;
+    --color01: #eaedef;
+    margin-bottom: 20px;
+    border: 3px solid var(--color01);
+    margin-bottom: var(--margin-bottom);
+    padding: 15px;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.orpf-service-info__tr__sub-category td {
+    padding: 0 15px;
+}
+
+.orpf-service-info__td__border {
+    padding: 0 !important;
+    border-left: 3px solid #eaedef;
+    height: 35px;
+    margin: 0 10px;
+    width: 5%;
+}
+
+.orpf-service-info__td__name {
+    width: 25%;
+}
+
+.orpf-service-info__td__type {
+    width: 30%;
+}
+
+.orpf-service-info__td__price {
+    width: 10%;
+}
+
+.orpf-service-info__td__unit {
+    width: 10%;
+}
+
+.orpf-service-info__span__name,
+.orpf-service-info__span__price {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.orpf-service-info__td__price {
+    margin-left: auto;
+    text-align: right;
+}
+
+.orpf-radio__span__explanation {
+    background: none;
+    display: block;
+    font-size: 1.4rem;
+    height: auto;
+    line-height: 1.6;
+    margin-top: 8px;
+    position: static;
+    width: 100%;
+    font-weight: 400;
+}
+
+.orpf-input-radio-box__div {
+    margin: 0 16px;
+}
+
+.orpf-input-radio-box-container__div__sub-category-container {
+    font-size: 1.6rem;
+    position: relative;
+}
+
+#orpf_id-discount-item__label__1,
+#orpf_id-no-discount-item__label {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 48px;
+    margin-bottom: 30px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+#orpf_id-discount-item__label__1,
+#orpf_id-no-discount-item__label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.orpf-radio__span__name {
+    flex: 1;
+    display: inline-block;
+}
+
+.orpf-radio__span__amount {
+    margin-left: auto;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.orpf-radio__hr__separator {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #CCCCCC;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* ISP画面に影響あるためIDで記載 */
+#orpf_id-discount-item__label__1:hover,
+#orpf_id-no-discount-item__label:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+#orpf_id-discount-item__label__1:has(input:checked),
+#orpf_id-no-discount-item__label:has(input:checked) {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-radio__input__sub-category {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+}
+
+#orpf_id-discount-item__label__1:before,
+#orpf_id-no-discount-item__label:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 21px;
+    top: 22px;
+    position: absolute;
+    transition: border-color .3s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#orpf_id-discount-item__label__1:has(input:checked):after,
+#orpf_id-no-discount-item__label:has(input:checked):after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    left: 20px;
+    top: 22px;
+    margin-left: 5px;
+    margin-top: 5px;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+
+#orpf_id-discount-item__label__1:hover:before,
+#orpf_id-discount-item__label__1:has(input:checked):before,
+#orpf_id-no-discount-item__label:hover:before,
+#orpf_id-no-discount-item__label:has(input:checked):before {
+    border-color: #0072bc;
+}
+
+.orpf-alert__div__note {
+    font-size: 1.3rem;
+    color: #db3d23;
+    margin-bottom: 20px;
+}
+
+/* ---------------------------- */
+/* ISP画面 */
+.orpf-note__div__sub-category {
+    margin: 0 16px;
+    font-size: 1.5rem;
+}
+
+#orpf_id-note-explanation__p__1 {
+    margin: 0;
+}
+
+#orpf_id-note-explanation__p__2 {
+    margin-top: 0;
+    margin-bottom: 22px;
+    color: #db3d23;
+}
+
+.orpf-sort-filter__div__sub-category {
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+
+.orpf-sort__button__sort-order,
+.orpf-filter__button__filter {
+    text-decoration: none;
+    color: #0072bc;
+    font-weight: 700;
+    margin-left: 0px;
+    width: 135px;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.orpf-sort__button__sort-order:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../public/images/isp_sort_order_icon01.svg);
+    background-size: cover;
+    margin-right: 8px;
+    position: relative;
+    top: 5px;
+}
+
+.orpf-filter__button__filter:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../public/images/isp_sort_order_icon02.svg);
+    background-size: cover;
+    margin-right: 8px;
+    position: relative;
+    top: 5px;
+}
+
+#orpf_id-sort-order-list__div.orpf-sort__div__list-container {
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    right: 160px;
+    text-align: left;
+    width: 240px;
+    z-index: 100;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.5rem;
+}
+
+#orpf_id-filter-list__div.orpf-filter__div__filter-list {
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    text-align: left;
+    width: 240px;
+    z-index: 100;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.5rem;
+}
+
+.orpf-sort__ul__list,
+.orpf-filter__ul__list {
+    list-style: none;
+}
+
+.orpf-sort__ul__list li,
+.orpf-filter__ul__list li {
+    border-bottom: 1px solid #EEEEEE;
+    height: 50px;
+    list-style: none;
+}
+
+.orpf-sort__ul__list li:last-child,
+.orpf-filter__ul__list li:last-child {
+    border-bottom: none;
+}
+
+.orpf-sort__li__asc:hover,
+.orpf-sort__li__desc:hover,
+.orpf-sort__li__default:hover,
+.orpf-filter__li__free:hover,
+.orpf-filter__li__discount:hover,
+.orpf-filter__li__support:hover {
+    background-color: #f2faff;
+}
+
+.orpf-sort__label__asc:hover,
+.orpf-sort__label__desc:hover,
+.orpf-sort__label__default:hover,
+.orpf-filter__label__free:hover,
+.orpf-filter__label__discount:hover,
+.orpf-filter__label__support:hover {
+    font-weight: bold;
+}
+
+.orpf-sort__div__radio-container,
+.orpf-filter__div__checkbox-container {
+    display: inline-block;
+    font-size: 1.6rem;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+}
+
+.orpf-sort__label__asc,
+.orpf-sort__label__desc,
+.orpf-sort__label__default,
+.orpf-filter__label__free,
+.orpf-filter__label__discount,
+.orpf-filter__label__support {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 10px 0 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    line-height: 1;
+    position: relative;
+}
+
+.orpf-sort__div__radio-container label::before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.orpf-filter__div__checkbox-container label::before {
+    background: #fff;
+    border: 2px solid #adadad;
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.orpf-sort__label__asc:hover::before,
+.orpf-sort__label__desc:hover::before,
+.orpf-sort__label__default:hover::before,
+.orpf-filter__label__free:hover::before,
+.orpf-filter__label__discount:hover::before,
+.orpf-filter__label__support:hover::before {
+    border-color: #0072bc;
+}
+
+.orpf-sort__div__radio-container>input:checked~label {
+    font-weight: bold;
+}
+
+.orpf-sort__div__radio-container>input:checked~label::before {
+    border-color: #0072bc;
+}
+
+.orpf-filter__div__checkbox-container>input[type="checkbox"]:checked~label {
+    font-weight: bold;
+}
+
+.orpf-filter__div__checkbox-container>input[type=checkbox]:checked~label::before {
+    border-color: #0072bc;
+    background-color: #0072bc;
+}
+
+.orpf-sort__div__radio-container>input:checked~label::after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 15.6px;
+    top: 50%;
+    height: 13px;
+    width: 13px;
+    transform: translate(-50%, -50%);
+}
+
+.orpf-filter__div__checkbox-container>input[type=checkbox]:checked~label:after {
+    background: url(../public/images/icon-check.svg) no-repeat 50% / contain;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 21px;
+    height: 8px;
+    width: 12px;
+}
+
+/* ---------------------------- */
+/* ひかり電話選択画面 */
+.orpf-plan-list {
+    margin: 0 16px;
+}
+
+.orpf-plan-item {
+    --base-white-color: #fff;
+    --border-active-color: #0072bc;
+    --border-gray-color: #adadad;
+    --border-gray-color2: #d0d0d0;
+    --text-gray-color1: #6c6c6c;
+    --bg-gray-color1: #f5f5f5;
+    --margin-bottom: 15px;
+    --margin-bottom-sp: 15px;
+    border: 2px solid var(--border-gray-color);
+    border-radius: 8px;
+    margin-bottom: var(--margin-bottom);
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+}
+
+.orpf-option-item.disabled {
+    background-color: #f8f9fa !important;
+    opacity: .6;
+    pointer-events: none;
+}
+
+.orpf-plan-item:hover,
+.orpf-option-item:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-plan-item.selected {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-plan-header {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.orpf-plan-header.selected {
+    border-bottom: 1px solid var(--border-active-color);
+}
+
+.orpf-plan-label {
+    /* display: flex; */
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 15px 15px 15px 25px;
+    cursor: pointer;
+}
+
+.orpf-plan-label::before {
+    border: 2px solid var(--border-gray-color);
+    border-radius: 50%;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 0;
+    position: absolute;
+    top: 17px;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+}
+
+.orpf-plan-item.selected .orpf-plan-label::after {
+    background: var(--border-active-color);
+    border-radius: 50%;
+    content: "";
+    height: 9px;
+    width: 9px;
+    left: 5px;
+    position: absolute;
+    top: 22px;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+
+.orpf-plan-item:not(.disabled):hover .orpf-plan-label::before,
+.orpf-plan-item.selected .orpf-plan-label::before {
+    border-color: #0072bc;
+}
+
+/* .orpf-div__sub-category {
+    margin-bottom: 50px;
+} */
+
+.orpf-option-info {
+    align-items: baseline;
+    gap: 10px;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.orpf-plan-name {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.orpf-plan-description {
+    background: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.orpf-option-section,
+.orpf-set-option-section {
+    display: block;
+    margin-top: 15px;
+    padding: 0 20px 20px;
+}
+
+.orpf-blue-line {
+    border-bottom: 1px solid var(--border-active-color);
+    font-size: 1.6rem;
+    margin: 0 20px;
+    position: relative;
+}
+
+.orpf-option-title {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+
+}
+
+.orpf-option-list,
+.orpf-set-option-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 15px;
+    padding: 10px;
+    align-items: start;
+}
+
+.orpf-option-item,
+.orpf-set-option-item {
+    --text-gray-color1: #6c6c6c;
+    background-color: #fff;
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.orpf-set-option-item {
+    background-color: #fffbe6;
+    border: 2px solid #ffd700;
+}
+
+.orpf-option-item:has(input:checked) {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-option-label,
+.orpf-set-option-label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 20px 20px 20px 30px;
+    cursor: pointer;
+}
+
+.orpf-option-label::before,
+.orpf-set-option-label::before {
+    background: #fff;
+    border: 2px solid #adadad;
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.orpf-option-item:hover .orpf-option-label::before {
+    border-color: #0072bc;
+}
+
+.orpf-option-item>input:checked~.orpf-option-label::before {
+    background-color: #0072bc;
+    border-color: #0072bc;
+}
+
+.orpf-set-option-item>input:checked~.orpf-set-option-label::before {
+    background-color: #e6b800;
+    border-color: #e6b800;
+}
+
+.orpf-option-item>input[type=checkbox]:checked~.orpf-option-label::after,
+.orpf-set-option-item>input[type=checkbox]:checked~.orpf-set-option-label::after {
+    background: url(../public/images/icon-check.svg) no-repeat 50% / contain;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 9px;
+    width: 13px;
+}
+
+/* .orpf-additional-number {
+    display: block;
+    margin-top: 0;
+    padding: 0 20px 20px;
+    position: relative;
+}
+
+.orpf-additional-select {
+    border: 2px solid var(--border-active-color);
+    border-radius: 8px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 16px 10px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+} */
+
+#orpf_id-additional-number__div.orpf-additional-number {
+    padding: 0 20px 20px 20px;
+    position: relative;
+}
+
+#orpf_id-additional-number__div.orpf-additional-number:before {
+    content: "";
+    display: block;
+    background-color: #0072bc;
+    border-radius: 0 8px 8px 0;
+    width: 38px;
+    height: 51px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    pointer-events: none;
+}
+
+#orpf_id-additional-number__div.orpf-additional-number:after {
+    border: 2px solid var(--base-white-color);
+    border-bottom: 0;
+    border-left: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 11px;
+    right: 28px;
+    top: 24px;
+    line-height: 1;
+    position: absolute;
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(-225deg);
+    transform: translateY(-50%) translateX(-50%) rotate(-225deg);
+    vertical-align: middle;
+    width: 11px;
+    pointer-events: none;
+}
+
+#orpf_id-additional-number__div.orpf-additional-number select.orpf-additional-select {
+    border: 2px solid var(--border-active-color);
+    border-radius: 8px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 16px 10px;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.orpf-option-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.orpf-option-description-inline {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.orpf-option-fee {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.orpf-mutual-exclusion-message {
+    font-size: 12px;
+    color: #dc3545;
+    margin-top: 4px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.orpf-total-fee {
+    background-color: #0072bc;
+    font-size: 1.5rem;
+    margin: 32px -20px -20px;
+    padding: 16px 20px 17px;
+    text-align: right;
+    color: #fff;
+}
+
+.orpf-total-amount {
+    font-weight: 500;
+    text-align: right;
+    color: #fff;
+}
+
+
+/* ---------------------------- */
+/* wI-fI/ルーター選択画面 */
+.orpf-div__checkbox-item {
+    position: relative;
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 48px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.orpf-div__checkbox-item label,
+.orpf-div__checkbox-item .orpf-label__checkbox {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.orpf-div__checkbox-item::before {
+    background: #fff;
+    border: 2px solid #adadad;
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.orpf-div__checkbox-item:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+div.orpf-div__checkbox-item:has(input[type="checkbox"]:checked) {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-div__checkbox-item:hover::before {
+    border-color: #0072bc;
+}
+
+div.orpf-div__checkbox-item:has(input:checked)::before {
+    background-color: #0072bc;
+    border-color: #0072bc;
+}
+
+div.orpf-div__checkbox-item:has(input[type=checkbox]:checked)::after {
+    background: url(../public/images/icon-check.svg) no-repeat 50% / contain;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 9px;
+    width: 13px;
+    z-index: 1
+}
+
+.orpf-div__checkbox-item__left,
+.orpf-div__checkbox-label {
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    cursor: pointer;
+}
+
+.orpf-span__checkbox-description {
+    position: absolute;
+    text-align: right;
+    margin-right: 20px;
+    right: 0;
+    top: 19px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.orpf-div__card-container {
+    --gap: 20px;
+    --width: 50% 50%;
+    display: grid;
+    display: -ms-grid;
+    -ms-grid-columns: var(--width);
+    grid-template-columns: var(--width);
+    gap: var(--gap);
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 24px;
+    unicode-bidi: isolate;
+}
+
+#orpf_id-router-option__input__4,
+#orpf_id-router-option__input__3,
+#orpf_id-card-not-required__label {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+    padding: 20px 13px 15px 13px;
+}
+
+#orpf_id-card-not-required__label {
+    grid-column: 1 / -1;
+}
+
+#orpf_id-router-option__input__3:hover,
+#orpf_id-router-option__input__4:hover,
+#orpf_id-card-not-required__label:hover {
+    border: 1px solid #0072BC;
+    background-color: #f2faff;
+}
+
+#orpf_id-router-option__input__3:has(input:checked),
+#orpf_id-router-option__input__4:has(input:checked),
+#orpf_id-card-not-required__label:has(input:checked) {
+    border: 1px solid #0072BC;
+    background-color: #f2faff;
+}
+
+.orpf-div__card--selectable {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.orpf-card__header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.orpf-card__title {
+    margin: 0;
+}
+
+.orpf-card__description {
+    font-size: 1.5rem;
+}
+
+.orpf-fieldset__card__choices {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.orpf-div__card__choice {
+    border: 0;
+    padding: 8px 0;
+    font-weight: 700;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.orpf-label__card__choiceLabel {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 28px;
+    cursor: pointer;
+    width: auto;
+    margin: 0;
+}
+
+.orpf-label__card__choiceLabel::before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    transition: border-color .3s ease;
+}
+
+.orpf-div__card-radio:has(input:checked) .orpf-label__card__choiceLabel::after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#orpf_id-router-option__input__3:hover .orpf-label__card__choiceLabel::before,
+#orpf_id-router-option__input__4:hover .orpf-label__card__choiceLabel::before,
+.orpf-div__card-radio:hover .orpf-label__card__choiceLabel::before,
+.orpf-div__card-radio:has(input:checked) .orpf-label__card__choiceLabel::before {
+    border-color: #0072bc;
+}
+
+.orpf-div__card-radio:has(input:checked) .orpf-label__card__choiceLabel::after {
+    content: "";
+    position: absolute;
+    background: #0072bc;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .3s ease;
+    z-index: 1;
+}
+
+.orpf-div__card--full-width {
+    position: relative;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    cursor: pointer;
+}
+
+.orpf-div__card--full-width::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 19px;
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: border-color .3s ease;
+    box-sizing: border-box;
+}
+
+.orpf-div__card--full-width:hover {
+    background-color: #f0f7ff;
+}
+
+.orpf-div__card--full-width:has(input:checked)::before,
+.orpf-div__card--full-width:hover::before {
+    border-color: #0072bc;
+}
+
+.orpf-div__card--full-width:has(input:checked)::after {
+    content: "";
+    position: absolute;
+    background: #0072bc;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    left: 24.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .3s ease;
+    z-index: 1;
+}
+
+.orpf-card__content {
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 10px 15px 10px 25px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 28px;
+    cursor: pointer;
+    width: auto;
+    margin: 0;
+}
+
+.orpf-card__text {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.orpf-card__img {
+    padding: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.orpf-div__cancellation-notice {
+    color: #db3d23;
+    font-size: 1.3rem;
+    margin-bottom: 85px;
+}
+
+/* ---------------------------- */
+/* お客さま情報入力画面 */
+.orpf-form .orpf-input-radio-box {
+    --text-gray-color1: #6c6c6c;
+    margin-top: 2px;
+    margin-bottom: var(--margin-bottom);
+    display: flex;
+    flex-direction: row;
+}
+
+.orpf-form .orpf-input-radio-box .orpf-input-radio-box-container {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+    flex: 1;
+}
+
+.orpf-form .orpf-input-radio-box__label {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 48px;
+    position: relative;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.orpf-form .orpf-input-radio-box__input:not(:disabled)+.orpf-input-radio-box__label:hover,
+.orpf-form .orpf-input-radio-box__input:checked+.orpf-input-radio-box__label {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-form .orpf-input-radio-box__label:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 19px;
+    top: 22px;
+    position: absolute;
+    transition: border-color .3s ease;
+    cursor: pointer;
+}
+
+.orpf-form .orpf-input-radio-box__input:checked+.orpf-input-radio-box__label:after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    width: 10px;
+    height: 10px;
+    left: 24px;
+    top: 27px;
+    position: absolute;
+    transition: background-color .3s ease;
+}
+
+.orpf-form .orpf-input-radio-box__input:not(:disabled)+.orpf-input-radio-box__label:hover:before,
+.orpf-form .orpf-input-radio-box__input:checked+.orpf-input-radio-box__label:before {
+    border-color: #0072bc;
+}
+
+.orpf-form .orpf-input-text.--horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 100%;
+    font-weight: 500;
+    line-height: 1.6;
+    --margin-bottom: 15px;
+    margin-bottom: var(--margin-bottom);
+    max-width: var(--width);
+    width: 100%;
+}
+
+#orpf_id-contractor-name-kana-container__div,
+#orpf_id-phone-form-group__div {
+    margin-bottom: 50px;
+}
+
+.orpf-form .orpf-input-text.--horizontal .orpf-input-text-container__div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.orpf-form .orpf-input-text.--horizontal .orpf-input-text__label {
+    white-space: nowrap;
+    min-width: 40px;
+    margin-bottom: 0;
+}
+
+.orpf-form .orpf-input-text__label,
+.orpf-div__item .orpf-input-text__label {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.orpf-form .orpf-input-text.--horizontal .orpf-input-text__input {
+    flex: 1;
+}
+
+.orpf-form .orpf-input-text__input,
+.orpf-input-text__input__field,
+.orpf-div__item .orpf-input-text__input {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    line-height: 1.5;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: text;
+}
+
+.orpf-form .orpf-input-text__input:focus {
+    outline: 2px solid #56bcff;
+}
+
+/* 生年月日 */
+.orpf-form-group__div.--horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: -webkit-fill-available;
+    max-width: stretch;
+    gap: 10px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.orpf-form-group__div.--horizontal .orpf-select-dropdown__div {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    min-width: 0;
+    position: relative;
+}
+
+.orpf-form-group__div.--horizontal select {
+    width: 100%;
+    min-width: 200px;
+    min-height: 48px;
+    padding: 14px 50px 14px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 400;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#orpf_id-birth-date-form-group__div .orpf-select-dropdown__div::after {
+    content: "";
+    display: inline-block;
+    border: 2px solid #ffffff;
+    border-bottom: 0;
+    border-left: 0;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 57px;
+    top: 50%;
+    transform: translate(50%, -50%) rotate(-225deg);
+    line-height: 1;
+    vertical-align: middle;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.orpf-form-group__div.--horizontal select:disabled {
+    background-color: #f5f5f5;
+    color: #3e3a3a;
+    cursor: not-allowed;
+    opacity: .6;
+}
+
+.orpf-form:not(:has(#orpf_id-contract-type__div .orpf-input-radio-box__input:checked)) #orpf_id-birth-date-form-group__div select,
+#orpf_id-birth-date-form-group__div:has(select#orpf_id-birth-year__select option[value=""]:checked) select#orpf_id-birth-month__select,
+#orpf_id-birth-date-form-group__div:has(select#orpf_id-birth-month__select option[value=""]:checked) select#orpf_id-birth-day__select {
+    cursor: default;
+    border: 2px solid #d0d0d0;
+    color: #adadad;
+    background: linear-gradient(to right, #fff calc(100% - 40px), #d0d0d0 calc(100% - 40px));
+    pointer-events: none;
+}
+
+.orpf-form:has(#orpf_id-contract-type__div .orpf-input-radio-box__input:checked) select#orpf_id-birth-year__select {
+    cursor: pointer;
+    color: #333;
+    border: 2px solid #0072bc;
+    background: linear-gradient(to right, #f2faff calc(100% - 40px), #0072bc calc(100% - 40px));
+    pointer-events: auto;
+}
+
+.orpf-form:has(#orpf_id-contract-type__div .orpf-input-radio-box__input:checked) #orpf_id-birth-year-dropdown__div:after {
+    border-top-color: #fff;
+}
+
+#orpf_id-birth-date-form-group__div:not(:has(select#orpf_id-birth-year__select option[value=""]:checked)) select#orpf_id-birth-month__select {
+    cursor: pointer;
+    color: #333;
+    border: 2px solid #0072bc;
+    background: linear-gradient(to right, #f2faff calc(100% - 40px), #0072bc calc(100% - 40px));
+    pointer-events: auto;
+}
+
+#orpf_id-birth-date-form-group__div:not(:has(select#orpf_id-birth-year__select option[value=""]:checked)) #orpf_id-birth-month-dropdown__div:after {
+    border-top-color: #fff;
+}
+
+#orpf_id-birth-date-form-group__div:not(:has(select#orpf_id-birth-month__select option[value=""]:checked)) select#orpf_id-birth-day__select {
+    cursor: pointer;
+    color: #333;
+    border: 2px solid #0072bc;
+    background: linear-gradient(to right, #f2faff calc(100% - 40px), #0072bc calc(100% - 40px));
+    pointer-events: auto;
+}
+
+#orpf_id-birth-date-form-group__div:not(:has(select#orpf_id-birth-month__select option[value=""]:checked)) #orpf_id-birth-day-dropdown__div:after {
+    border-top-color: #fff;
+}
+
+.orpf-form-group__div select:not(:disabled):focus {
+    outline: none;
+    border-color: #0072bc;
+    box-shadow: 0 0 0 3px #0072bc26;
+    background: linear-gradient(to right, #e8f4fd calc(100% - 40px), #0072bc calc(100% - 40px));
+}
+
+.orpf-form-group__div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.orpf-alert__div,
+#orpf_id-email-notice__div__space,
+#orpf_id-contract-address-title-container__div__space {
+    margin: 10px 15px;
+}
+
+#orpf_id-contract-address-title-container__div__space .orpf-form-group__p__note {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+}
+
+.orpf-alert__div p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.orpf-form-group__p__note {
+    margin: 0;
+}
+
+.orpf-form-group__div .orpf-form__span,
+.orpf-form__span__separator {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    line-height: 1;
+}
+
+.orpf-form .orpf-form-group__div input {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    line-height: 1.5;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+.orpf-address__content {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px
+}
+
+
+.orpf-input-show-box__div {
+    background-color: #f2faff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0072bc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px
+}
+
+/* 非活性時 */
+.orpf-form .orpf-form__h3--disabled {
+    background: #f5f5f5;
+    color: #3e3a3a;
+    opacity: .6;
+}
+
+.orpf-form .orpf-input-radio-box__input:disabled+.orpf-input-radio-box__label {
+    color: #999;
+    opacity: .6;
+}
+
+#orpf_id-address-search-form-banchigo__div,
+#orpf_id-address-search-form-building__div {
+    margin: 0 16px;
+
+}
+
+.orpf-address-search-form__container .orpf-input-text__input--input-mode {
+    width: 100%;
+    padding: 12px 36px 12px 12px;
+    border: 2px solid #0072bc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+#orpf_id-address-search-dropdown__ul {
+    position: absolute;
+    z-index: 50;
+}
+
+
+/* 付加サービス情報入力 */
+.orpf-card__div__group3-container {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    line-height: 1.32;
+    padding: 20px 20px 20px 48px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/* ---------------------------- */
+/* ひかり電話情報入力画面 */
+.orpf-form-input-radio-box__div {
+    display: flex;
+    flex-direction: row;
+}
+
+.orpf-form-input-radio-box__div__item {
+    margin-left: 15px;
+    margin-right: 15px;
+    flex: 1;
+}
+
+.orpf-form-input-radio-box__div__item .orpf-form-input-radio-box__label {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 48px;
+    position: relative;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.orpf-form-input-radio-box__div__item .orpf-form-input-radio-box__label:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 20px;
+    position: absolute;
+    top: 22px;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.orpf-form-input-radio-box__div__item .orpf-form-input-radio-box__input:checked+.orpf-form-input-radio-box__label:after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    width: 9px;
+    height: 9px;
+    top: 27px;
+    left: 25px;
+    position: absolute;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.orpf-form-input-radio-box__div__item .orpf-form-input-radio-box__label:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-form-input-radio-box__div__item .orpf-form-input-radio-box__label:hover:before {
+    border-color: #0072bc;
+}
+
+.orpf-form-input-radio-box__div__item .orpf-form-input-radio-box__input:checked+.orpf-form-input-radio-box__label {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-form-input-radio-box__div__item .orpf-form-input-radio-box__input:checked+.orpf-form-input-radio-box__label:before {
+    border-color: #0072bc;
+}
+
+.orpf-text__p__note-text,
+.orpf-form__h4,
+.orpf-form__h5 {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 1.5rem;
+
+}
+
+/* 画面内テキスト */
+/* .orpf-form__h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 10px;
+} */
+
+#orpf_id-current-carrier-sub-category-title__div .orpf-form__h4,
+#orpf_id-contract-owner-sub-category-title__div .orpf-form__h4,
+#orpf_id-contractor-name-sub-category-title__div .orpf-form__h4,
+#orpf_id-application-address-sub-category__div .orpf-form__h4,
+#orpf_id-directory-person-name-sub-category-title__div .orpf-form__h4,
+#orpf_id-contract-address-sub-category-title__div .orpf-form__h4,
+#orpf_id-current-location-sub-category-title__div .orpf-form__h4 {
+    border-bottom: 2px solid #f5f5f5;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    padding: 0 0 10px;
+}
+
+#orpf_id-contract-address-sub-category-title__div .orpf-form__h4,
+#orpf_id-current-location-sub-category-title__div .orpf-form__h4,
+#orpf_id-directory-name-sub-category-title__div .orpf-form__h4,
+#orpf_id-directory-name-sub-category-title-content__div .orpf-form__h4 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#orpf_id-current-carrier-sub-category-title__div .orpf-form__h5,
+#orpf_id-contract-owner-sub-category-title__div .orpf-form__h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+#orpf_id-application-address-sub-category-content__div .orpf-address__content {
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    font-size: 100%;
+}
+
+#orpf_id-contract-address-search__div,
+#orpf_id-current-location-address-search__div,
+#orpf_id-invoice-recipient-address-input-area__div {
+    background-color: #f2faff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0072bc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+}
+
+#orpf_id-contract-address-search__div .orpf-form__h4,
+#orpf_id-current-location-address-search__div .orpf-form__h4 {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+.orpf-form-hikari-phone-info__div .orpf-form-form-group__div,
+.orpf-form-hikari-phone-info__div .orpf-div__form-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px
+}
+
+.orpf-form-hikari-phone-info__div .orpf-form-form-group__div #orpf_id-keep-phone-number-area-code__input,
+.orpf-form-hikari-phone-info__div .orpf-div__form-group #orpf_id-keep-phone-number-area-code__input {
+    width: 150px;
+    max-width: 150px;
+}
+
+.orpf-form-hikari-phone-info__div .orpf-form-form-group__div .orpf-form__span,
+.orpf-form-hikari-phone-info__div .orpf-div__form-group .orpf-form-group__span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+    margin: 0 4px;
+}
+
+.orpf-form-hikari-phone-info__div .orpf-form-form-group__div input[type=text],
+.orpf-form-hikari-phone-info__div .orpf-div__form-group input[type=text] {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    line-height: 1.5;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+.orpf-form-hikari-phone-info__div .orpf-form-input-text__div.orpf-form-horizontal__div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 0;
+    align-items: baseline;
+    font-size: 100%;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    min-width: 60px;
+}
+
+.orpf-form-hikari-phone-info__div .orpf-form-input-text__div.orpf-form-horizontal__div .orpf-form-input-text__div__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
+
+.orpf-form-hikari-phone-info__div .orpf-form-input-text__div.orpf-form-horizontal__div .orpf-form-input-text__label {
+    white-space: nowrap;
+    min-width: 40px;
+    margin-bottom: 0;
+}
+
+.orpf-form-hikari-phone-info__div .orpf-form-input-text__input {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    line-height: 1.5;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+
+/* ---------------------------- */
+/* 支払方法選択画面 */
+.orpf-div__input-radio-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.orpf-div__input-radio-box .orpf-div__input-radio-box-container,
+.orpf-div__credit-card-area {
+    margin-left: 15px;
+    margin-right: 15px;
+    flex: 1;
+}
+
+.orpf-div__input-radio-box .orpf-input-radio-box__label {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 48px;
+    position: relative;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.orpf-div__input-radio-box .orpf-input-radio-box__label:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 20px;
+    top: 22px;
+    position: absolute;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.orpf-input-radio-box__input:checked+.orpf-input-radio-box__label:after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    width: 9px;
+    height: 9px;
+    top: 27px;
+    left: 25px;
+    position: absolute;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+
+.orpf-div__input-radio-box .orpf-input-radio-box__label:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-div__input-radio-box .orpf-input-radio-box__label:hover:before {
+    border-color: #0072bc;
+}
+
+.orpf-input-radio-box__input:checked+.orpf-input-radio-box__label {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-input-radio-box__input:checked+.orpf-input-radio-box__label:before {
+    border-color: #0072bc;
+}
+
+
+#orpf_id-input-radio-box__div-space {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#orpf_id-input-radio-box__div:has(#orpf_id-payment-method-credit__input:checked)+#orpf_id-input-radio-box__div-space {
+    display: flex;
+}
+
+#orpf_id-input-radio-box__div-space::before {
+    content: "以下のマークがあるクレジットカードをご利用いただけます。";
+    display: block;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* ToDo 画像出し分け方法決まり次第修正する可能性あり */
+#orpf_id-input-radio-box__div-space::after {
+    content: url("../public/images/credit_card_image.png");
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#orpf_id-credit-register__button.orpf-button__credit-register {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #1a1a1a;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    background: #f4c542;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .3s ease;
+    font-family: inherit;
+    margin-bottom: .5rem;
+}
+
+#orpf_id-credit-register__button.orpf-button__credit-register:hover {
+    background: #f6d271;
+}
+
+.orpf-div__credit-info-label {
+    margin-top: 30px;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.orpf-div__credit-info-tiles {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: .5rem;
+    width: min(100%, 32rem);
+    min-width: 0;
+    max-width: 32rem;
+}
+
+.orpf-div__credit-info-tile {
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.orpf-div__credit-info-tile__label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.orpf-div__credit-info-tile__value {
+    color: #222;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 8px 12px;
+    background-color: #fff;
+    overflow-wrap: anywhere;
+}
+
+
+.orpf-div__recipient-name-input-area {
+    background-color: #f2faff;
+    padding: 20px;
+    border: 1px solid #0072bc;
+    border-radius: 8px;
+    margin: 10px 15px 20px;
+}
+
+.orpf-div__recipient-name-input-area .orpf-div__input-field_name {
+    display: flex;
+    flex-direction: column;
+}
+
+.orpf-div__recipient-name-input-area .orpf-div__input-field__label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+.orpf-div__recipient-name-input-area .orpf-input-text {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 100%;
+    line-height: 1.5;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color .3s ease;
+    margin-bottom: 20px;
+}
+
+.orpf-p__bank-transfer-notice,
+.orpf-p__note,
+.orpf-p__construction-payment-note,
+.orpf-p__invoice-recipient-address-note,
+.orpf-p__provider-fee-payment-note {
+    margin: 10px 16px 0;
+    font-size: 1.5rem;
+}
+
+#orpf_id-construction-payment-note__p {
+    margin-bottom: 0;
+}
+
+#orpf_id-construction-payment-content__div-space {
+    margin: 0 15px 50px;
+}
+
+.orpf-form-group__p__note a {
+    color: #0072bc;
+}
+
+
+/* ---------------------------- */
+/* 現調画面 */
+.orpf-input-radio-box__div__wrapper {
+    --text-gray-color1: #6c6c6c;
+    --margin-bottom: 30px;
+    margin-bottom: var(--margin-bottom);
+    display: flex;
+    flex-direction: row;
+}
+
+.orpf-input-radio-box__div__wrapper .orpf-input-radio-box-container__div__item {
+    margin-left: 15px;
+    margin-right: 15px;
+    flex: 1;
+}
+
+.orpf-input-radio-box__label__text {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 55px;
+    position: relative;
+    background-color: #fff;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.orpf-input-radio-box__label__text:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 20px;
+    top: 22px;
+    position: absolute;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.orpf-input-radio-box__input__selection:checked+label:after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    width: 9px;
+    height: 9px;
+    top: 27px;
+    left: 25px;
+    position: absolute;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.orpf-input-radio-box-container__div__item:hover .orpf-input-radio-box__label__text {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-input-radio-box-container__div__item:hover .orpf-input-radio-box__label__text:before {
+    border-color: #0072bc;
+}
+
+.orpf-input-radio-box__input__selection:checked+label {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-input-radio-box__input__selection:checked+label:before {
+    border: 2px solid #0072bc;
+}
+
+.orpf-form-group__div__input-box {
+    margin: 0 15px 20px;
+}
+
+#orpf_id-field-title__h4__1,
+#orpf_id-field-title__h4__4 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.orpf-header__h4__field-title {
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.orpf-form-group__div__field-group {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: 0;
+}
+
+.orpf-input-text__input__witness-phone-number {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    line-height: 1.5;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+/* ---------------------------- */
+/* 工事希望日選択画面 */
+.orpf-form-group__div__select-time,
+.orpf-card__div__calendar-selected-date {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.orpf-alert__p__note-content {
+    color: #db3d23;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+
+/* ---------------------------- */
+/* 重要書類送付画面 */
+/* ？モーダル、カレンダー部分：インラインCSS */
+#orpf_id-open-delivery-info-input-modal__button,
+#orpf_id-main-title__span {
+    margin-left: 10px;
+    background-color: #0072bc;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 11px;
+    position: absolute;
+    top: 10px;
+}
+
+#orpf_id-delivery-address-and-name-title__div {
+    position: relative;
+}
+
+#orpf_id-delivery-desired-date-show__div {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+/* .orpf-div__item {
+    --text-gray-color1: #6c6c6c;
+    --margin-bottom: 30px;
+    margin-bottom: var(--margin-bottom);
+    display: flex;
+    flex-direction: row;
+} */
+
+.orpf-radio__wrapper {
+    margin: 0 15px;
+    flex: 1;
+}
+
+.orpf-div__item .orpf-input-radio-box__label {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 55px;
+    position: relative;
+    background-color: #fff;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.orpf-div__item .orpf-input-radio-box__label:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 20px;
+    position: absolute;
+    top: 22px;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.orpf-div__item .orpf-input-radio-box__input:checked+label:after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    width: 9px;
+    height: 9px;
+    top: 27px;
+    left: 25px;
+    position: absolute;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.orpf-div__item .orpf-input-radio-box__label:hover,
+.orpf-div__item .orpf-input-radio-box__input:checked+.orpf-input-radio-box__label {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-div__item .orpf-input-radio-box__label:hover:before,
+.orpf-div__item .orpf-input-radio-box__input:checked+.orpf-input-radio-box__label:before {
+    border-color: #0072bc;
+}
+
+#orpf_id-delivery-address-and-name-other-show__div {
+    background-color: #f2faff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0072bc;
+    border-image: initial;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 15px 20px;
+    margin-bottom: var(--margin-bottom);
+    display: flex;
+    flex-direction: column;
+}
+
+.orpf-select-dropdown__div__sub-category {
+    margin-bottom: 40px;
+}
+
+#orpf_id-delivery-name--kana-other-label__div {
+    margin-top: 15px;
+}
+
+/* ---------------------------- */
+/* ひかり電話番号選択画面 */
+#orpf_id-tel-numbers-radio__div__1 .orpf-input-radio-box__label,
+#orpf_id-tel-numbers-radio__div__1 .orpf-input-radio-box__div--selected,
+#orpf_id-tel-numbers-radio__div__2 .orpf-input-radio-box__label,
+#orpf_id-tel-numbers-radio__div__2 .orpf-input-radio-box__div--selected,
+#orpf_id-tel-numbers-radio__div__3 .orpf-input-radio-box__label,
+#orpf_id-tel-numbers-radio__div__3 .orpf-input-radio-box__div--selected {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    line-height: 1.32;
+    padding: 20px 20px 20px 55px;
+    position: relative;
+    background-color: #fff;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+#orpf_id-tel-numbers-radio__div__1,
+#orpf_id-tel-numbers-radio__div__2,
+#orpf_id-tel-numbers-radio__div__3,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__1,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__2,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__3 {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 10px 15px 15px;
+    box-sizing: border-box;
+}
+
+#orpf_id-tel-numbers-radio__div__1 .orpf-input-radio-box__label:before,
+#orpf_id-tel-numbers-radio__div__2 .orpf-input-radio-box__label:before,
+#orpf_id-tel-numbers-radio__div__3 .orpf-input-radio-box__label:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 20px;
+    position: absolute;
+    top: 22px;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#orpf_id-tel-numbers-radio__div__1 .orpf-input-radio-box__label:after,
+#orpf_id-tel-numbers-radio__div__2 .orpf-input-radio-box__label:after,
+#orpf_id-tel-numbers-radio__div__3 .orpf-input-radio-box__label:after {
+    content: "";
+    display: none;
+    position: absolute;
+    background: #0072bc;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    top: 27px;
+    left: 25px;
+    z-index: 3;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+
+#orpf_id-tel-numbers-radio__div__1 .orpf-input-radio-box__label:hover,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__1 .orpf-input-radio-box__label,
+#orpf_id-tel-numbers-radio__div__2 .orpf-input-radio-box__label:hover,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__2 .orpf-input-radio-box__label,
+#orpf_id-tel-numbers-radio__div__3 .orpf-input-radio-box__label:hover,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__3 .orpf-input-radio-box__label {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+#orpf_id-tel-numbers-radio__div__1 .orpf-input-radio-box__label:hover:before,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__1 .orpf-input-radio-box__label:before,
+#orpf_id-tel-numbers-radio__div__2 .orpf-input-radio-box__label:hover:before,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__2 .orpf-input-radio-box__label:before,
+#orpf_id-tel-numbers-radio__div__3 .orpf-input-radio-box__label:hover:before,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__3 .orpf-input-radio-box__label:before {
+    border-color: #0072bc;
+}
+
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__1 .orpf-input-radio-box__label::after,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__2 .orpf-input-radio-box__label::after,
+.orpf-input-radio-box__div--selected#orpf_id-tel-numbers-radio__div__3 .orpf-input-radio-box__label::after {
+    display: block;
+}
+
+.orpf-input-radio-box__span--number {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+/* ---------------------------- */
+/* 約款画面 */
+.orpf-card__div__sub-category {
+    margin-bottom: 50px;
+}
+
+.orpf-content__div__sub-category {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.orpf-card__div__sub-category-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.orpf-card-test__a__sub-category-inline {
+    --link-text-color01: #0072bc;
+    color: var(--link-text-color01);
+    line-height: 1.6;
+    position: relative;
+    text-decoration: underline;
+}
+
+.orpf-card__div__sub-category-inline.orpf-card__div__sub-scroll {
+    max-height: 350px;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+}
+
+.orpf-note-item__div__sub-category-inline {
+    padding-right: 10px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.orpf-checkbox-title-text__span__sub-category-inline,
+.orpf-note-item-title__div__sub-category-inline,
+.orpf-checkbox-title-link__a__sub-category-inline {
+    color: #004979;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0.08em;
+}
+
+#orpf_id-sub-category-ui003-inline__div {
+    align-items: center;
+}
+
+.orpf-agreement-checkbox__div__sub-category-inline {
+    --text-gray-color1: #6c6c6c;
+    background-color: #fff;
+    width: 40%;
+    min-width: 280px;
+    margin-bottom: 30px;
+}
+
+.orpf-agreement-checkbox__input__sub-category-inline:disabled+.orpf-agreement-checkbox__label__sub-category-inline {
+    background-color: #f5f5f5;
+    border-color: #d0d0d0;
+    color: #adadad;
+}
+
+
+.orpf-agreement-checkbox__label__sub-category-inline {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    position: relative;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.orpf-agreement-checkbox__label__sub-category-inline:before {
+    background: #fff;
+    border: 2px solid #adadad;
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+
+.orpf-agreement-checkbox__input__sub-category-inline:not(:disabled)+.orpf-agreement-checkbox__label__sub-category-inline:after {
+    background: url(../public/images/icon-check.svg) no-repeat 50% / contain;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 12px;
+    z-index: 1;
+}
+
+.orpf-agreement-checkbox__input__sub-category-inline:disabled+.orpf-agreement-checkbox__label__sub-category-inline:before {
+    background-color: #f5f5f5;
+    border-color: #d0d0d0;
+}
+
+.orpf-agreement-checkbox__input__sub-category-inline:not(:disabled)+.orpf-agreement-checkbox__label__sub-category-inline:hover,
+.orpf-agreement-checkbox__input__sub-category-inline:checked+.orpf-agreement-checkbox__label__sub-category-inline {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-agreement-checkbox__input__sub-category-inline:not(:disabled)+.orpf-agreement-checkbox__label__sub-category-inline:hover:before {
+    border-color: #0072bc;
+}
+
+.orpf-agreement-checkbox__input__sub-category-inline:checked+.orpf-agreement-checkbox__label__sub-category-inline:before {
+    border-color: #0072bc;
+    background-color: #0072bc;
+}
+
+/* ---------------------------- */
+/* 申込内容確認画面 */
+#orpf_id-app-confirm-info-attention-top-detail__div {
+    display: block;
+    margin-top: 15px;
+}
+
+#orpf_id-app-confirm-info-attention-top-detail__div p:first-of-type,
+#orpf_id-app-confirm-info-attention-bottom-detail__div p:last-of-type {
+    display: block;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.7;
+    color: #000;
+}
+
+#orpf_id-app-confirm-info-attention-top-detail__div p:last-of-type,
+#orpf_id-app-confirm-info-attention-bottom-detail__div p:first-of-type {
+    padding-bottom: 16px;
+    margin: 0;
+    color: #000;
+    font-weight: 400;
+}
+
+#orpf_id-app-confirm-info-attention-top__div {
+    margin-bottom: 10px;
+}
+
+.orpf-app-confirm-info-screen__div .orpf-div__sub-category .orpf-div__sub-category-container:first-of-type {
+    color: #004979;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0.08em;
+}
+
+.orpf-app-confirm-info-screen__div .orpf-div__row {
+    display: flex;
+    line-height: 1.6;
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.orpf-app-confirm-info-screen__div .orpf-div__row .orpf-div__key {
+    font-weight: 700;
+    text-align: left;
+    border-left: 2px solid #EAEDEF;
+    border-right: 2px solid #EAEDEF;
+    border-top: 2px solid #EAEDEF;
+    border-bottom: 2px solid #EAEDEF;
+    background-color: #EAEDEF;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-top: -2px;
+}
+
+.orpf-app-confirm-info-screen__div .orpf-div__row .orpf-div__value {
+    border-left: 2px solid #EAEDEF;
+    border-right: 2px solid #EAEDEF;
+    border-top: 2px solid #EAEDEF;
+    border-bottom: 2px solid #EAEDEF;
+    background-color: #FFFFFF;
+    display: table-cell;
+    width: 60%;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-top: -2px;
+}
+
+.orpf-div__confirm-area-links {
+    padding: 8px;
+    text-align: right;
+}
+
+.orpf-div__confirm-area-links a {
+    width: auto;
+}
+
+.orpf-div__confirm-area-links .orpf-link__back {
+    --link-text-color01: #0072bc;
+    color: var(--link-text-color01);
+    line-height: 1.6;
+    position: relative;
+    text-decoration: underline;
+    text-align: right;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.orpf-div__confirm-area-links .orpf-link__back::after {
+    appearance: none;
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+}
+
+#orpf_id-app-confirm-info-update__a__customer {
+    --link-text-color01: #0072bc;
+    color: var(--link-text-color01);
+    line-height: 1.6;
+    position: relative;
+    text-decoration: underline;
+}
+
+#orpf_id-monthly-fee-breakdown-content__div,
+#orpf_id-construction-fee-breakdown-content__div {
+    background-color: #e6f2fb;
+    padding: 20px;
+    border-radius: 0 0 4px 4px;
+    font-size: 16px;
+}
+
+#orpf_id-monthly-fee-breakdown-content__div .orpf-card__div__row,
+#orpf_id-construction-fee-breakdown-content__div .orpf-card__div__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#orpf_id-monthly-total-label__div,
+#orpf_id-construction-total-label__div {
+    font-weight: 700;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    width: 70%;
+    flex: 0 0 70%;
+    font-size: 1.02em;
+    color: #0072bc;
+    padding: 10px 15px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+#orpf_id-monthly-total-value__div,
+#orpf_id-construction-total-value__div {
+    border: none;
+    background-color: transparent;
+    width: 30%;
+    flex: 0 0 30%;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 10px 15px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.orpf-card__hr__separator {
+    border: none;
+    border-bottom: 1px solid #0072bc;
+    margin: 10px 0;
+}
+
+#orpf_id-installment-separator__hr {
+    display: none !important;
+}
+
+.orpf-card__div__note-container {
+    font-weight: 700;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    width: 70%;
+    flex: 0 0 70%;
+    font-size: 14px;
+    flex-shrink: 0;
+    padding-left: 15px;
+}
+
+.orpf-card__div__note-text {
+    border: none;
+    background-color: transparent;
+    width: 30%;
+    flex: 0 0 30%;
+    text-align: right;
+    font-size: 14px;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-right: 15px
+}
+
+#orpf_id-app-confirm-info-attention-bottom-detail__div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------------------- */
+/* お申込み完了画面 */
+#orpf_id-application-complete__h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.orpf-div__div__sub-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#orpf_id-application-complete__label__2 {
+    font-size: 1.5em !important;
+}
+
+#orpf_id-application-complete__label__3 {
+    margin-top: 20px;
+}
+
+.orpf-div__div__sub-category--card {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background: #f5f6f8;
+    border: 1px solid #d1d5db;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.orpf-complete-button__span__text {
+    text-decoration: underline;
+}
+
+/* 付加サービス選択 */
+#orpf_id-addsvc-select-sub-category__div {
+    margin: 0 16px 30px;
+}
+
+.orpf-card__div__group1-card-container {
+    position: relative;
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 30px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.orpf-checkbox__div__container .orpf-checkbox__label {
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.orpf-card__div__group1-card-container:before {
+    background: #fff;
+    border: 2px solid #adadad;
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    left: 20px;
+    top: 16%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+
+.orpf-card__div__group1-card-container:has(input[type=checkbox]:checked)::after {
+    background: url(../public/images/icon-check.svg) no-repeat 50% / contain;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 24px;
+    top: 16%;
+    transform: translateY(-50%);
+    height: 9px;
+    width: 13px;
+    z-index: 1;
+}
+
+.orpf-card__div__group1-card-container:hover,
+.orpf-card__div__group1-card-container:has(input:checked) {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-card__div__group1-card-container:hover:before {
+    border-color: #0072bc;
+}
+
+.orpf-card__div__group1-card-container:has(input:checked):before {
+    border-color: #0072bc;
+    background-color: #0072bc;
+
+}
+
+.orpf-label__div__container .orpf-form__h4--group3,
+.orpf-textbox__div__container .orpf-form__h4--group3,
+.orpf-checkbox__div__container .orpf-form__h4--group3,
+.orpf-radio__div__container .orpf-form__h4--group3,
+.orpf-pulldown__div__container .orpf-form__h4--group3,
+.orpf-pulldown-quantity__div__container .orpf-form__h4--group3,
+.orpf-link__div__container .orpf-form__h4--group3,
+.orpf-image__div__container .orpf-form__h4--group3,
+.orpf-contact__div__container .orpf-form__h4--group3,
+.orpf-email__div__container .orpf-form__h4--group3,
+.orpf-password__div__container .orpf-form__h4--group3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+}
+
+div[id="orpf_id-general-component-checkbox__div__A000001.00.fletsV6Option-space"],
+div[id="orpf_id-general-component-checkbox__div__A000002.00.remoteSupportService-space"],
+div[id="orpf_id-general-component-checkbox__div__A000003.00.gigarakuWifi-space"] {
+    border-bottom: 1px solid #d1d5db;
+    font-size: 1.6rem;
+    margin: 10px 0;
+    position: relative;
+}
+
+
+
+
+/* ------------インラインCSS---------------- */
+/* ISP */
+#orpf_id-provider-item-content__div .orpf-list__ul__sub-category {
+    padding: 0;
+    margin: 10px 16px;
+}
+
+li[id^="orpf_id-provider-item__li__"],
+li[id^="orpf_id-customer-preparation__li__"] {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 12px 0;
+    position: relative;
+    transition: border-color .3s ease;
+    cursor: pointer;
+}
+
+ul li[id^="orpf_id-provider-item__li__"]:hover,
+ul li[id^="orpf_id-customer-preparation__li__"]:hover,
+ul li[id^="orpf_id-provider-item__li__"]:has(input:checked),
+ul li[id^="orpf_id-customer-preparation__li__"]:has(input:checked) {
+    border-top: 1px solid #0072bc;
+    border-bottom: 1px solid #0072bc;
+    background-color: #f4fafd;
+    position: relative;
+}
+
+[id^="orpf_id-provider-item__label__"],
+#orpf_id-customer-preparation__label__15,
+#orpf_id-customer-preparation__label__10 {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+[id^="orpf_id-provider-item__label__"],
+#orpf_id-customer-preparation__label__15,
+#orpf_id-customer-preparation__label__10 {
+    display: table;
+    line-height: 1.3;
+    width: 100%;
+    padding-left: 22px;
+    vertical-align: middle;
+}
+
+ul[id^="orpf_id-provider-item-details__ul__"] {
+    display: grid;
+    grid-template-columns: 130px 170px 150px 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    gap: 0 40px;
+    align-items: center;
+}
+
+#orpf_id-customer-preparation-details__ul__15,
+#orpf_id-customer-preparation-details__ul__10 {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    display: flex;
+    min-height: 50px;
+}
+
+li[id^="orpf_id-provider-img__li__"] {
+    display: table-cell;
+    vertical-align: middle;
+    box-sizing: border-box;
+    position: relative;
+    grid-row: 1 / span 2;
+}
+
+.orpf-list-item__img__note-img {
+    max-width: 120px;
+    height: auto;
+    margin-left: 20px;
+    object-fit: contain;
+}
+
+#orpf_id-customer-preparation-plan-name__span {
+    display: inline-block;
+    width: 400px;
+    margin-left: 20px;
+}
+
+li[id^="orpf_id-provider-item__li__"]::before,
+li[id^="orpf_id-customer-preparation__li__"]::before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 21px;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 20px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    width: 21px;
+}
+
+li[id^="orpf_id-provider-item__li__"]:has(input:checked)::after,
+li[id^="orpf_id-provider-item__li__"] input:checked+label::after,
+li[id^="orpf_id-customer-preparation__li__"]:has(input:checked)::after,
+li[id^="orpf_id-customer-preparation__li__"] input:checked+label::after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    height: 11px;
+    left: 50%;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: 20px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    width: 11px;
+}
+
+li[id^="orpf_id-provider-item__li__"]:hover::before,
+li[id^="orpf_id-provider-item__li__"]:has(input:checked)::before,
+li[id^="orpf_id-provider-item__li__"] input:checked+label::before,
+li[id^="orpf_id-customer-preparation__li__"]:hover::before,
+li[id^="orpf_id-customer-preparation__li__"]:has(input:checked)::before,
+li[id^="orpf_id-customer-preparation__li__"] input:checked+label::before {
+    border-color: #0072bc;
+}
+
+
+li[id^="orpf_id-provider-plan-name__li__"] {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    font-weight: bold;
+    width: 220px;
+}
+
+li[id^="orpf_id-provider-price__li__"] {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: end;
+    margin: 0 0 10px 50px;
+    display: flex;
+}
+
+li[id^="orpf_id-provider-applicable-condition__li__"] {
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+li[id^="orpf_id-provider-explanation__li__"] {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+.orpf-list-item__span__price {
+    color: #0072bc;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.orpf-list-item__span__condition {
+    color: #d93e2c;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.orpf-list-item__span__billing {
+    background: #0072bc;
+    border-radius: 5px;
+    color: #fff;
+    display: table;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    padding: 2px 5px;
+    text-align: center;
+}
+
+.orpf-list-item__p__explanation,
+#orpf_id-customer-preparation-explanation__span {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* カレンダー部分 */
+.orpf-list__div__calendar-header {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.orpf-list__div__calendar-header div {
+    color: #0072bc;
+    font-size: 20px;
+}
+
+.orpf-list-item__div__calendar-header-prev {
+    padding-left: 5px;
+    width: 30%;
+}
+
+.orpf-list__div__calendar-header div button {
+    color: #0072bc;
+    font-weight: 600;
+    padding-bottom: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    min-width: 80px;
+    border: none !important;
+    background: transparent;
+    outline: none;
+}
+
+.orpf-button__button__calendar-header-prev {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.orpf-button__span__calendar-header-prev-icon-sc {
+    border-right: 3px solid orange;
+    border-top: 3px solid orange;
+    content: "";
+    height: 10px;
+    margin-top: 2px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    width: 10px;
+}
+
+.orpf-list__div__calendar-header div {
+    color: #0072bc;
+    font-size: 20px;
+}
+
+.orpf-list-item__div__calendar-header-info {
+    width: 40%;
+    text-align: center;
+}
+
+.orpf-list-item__div__calendar-header-next {
+    padding-right: 5px;
+    width: 30%;
+    text-align: -webkit-right;
+}
+
+.orpf-button__button__calendar-header-next {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.orpf-button__span__calendar-header-next-icon-sc {
+    border-right: 3px solid orange;
+    border-top: 3px solid orange;
+    content: "";
+    height: 10px;
+    margin-top: 2px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+}
+
+.orpf-table__table__calendar-content {
+    border: 1px solid #f5f5f5;
+    font-family: Noto Sans JP, YuGothic, YuGothicM, メイリオ, Meiryo, sans-serif;
+    font-weight: 500;
+    width: 100%;
+    table-layout: fixed;
+    line-height: 1.6;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.orpf-table-cell__th__calendar-header--normal:first-child {
+    width: 30%;
+}
+
+.orpf-table-cell__th__calendar-header--normal {
+    border: 1px solid #f5f5f5;
+    background-color: #fff;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 10px 6px;
+    font-size: 18px;
+    color: #000;
+}
+
+.orpf-table-cell__th__calendar-detail {
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 350;
+    position: relative;
+    border: 1px solid #f5f5f5;
+    background-clip: padding-box;
+    line-height: 1.6;
+}
+
+.orpf-table-cell__td__calendar-detail.orpf-table-cell__td__calendar-detail--selected {
+    background-color: #b0d0e67a;
+}
+
+.orpf-table-cell__td__calendar-detail {
+    border: 1px solid #f5f5f5;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.orpf-img__img__calendar-timezone {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+
+.orpf-card__div__calendar-box,
+.orpf-card__div__calendar {
+    margin: 0 16px 50px;
+}
+
+.orpf-header__div__calendar-header-list {
+    -webkit-box-pack: justify;
+    display: -webkit-box;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.orpf-header__div__calendar-header-list div,
+.orpf-header__div__calendar-com-header {
+    color: #0072bc;
+    font-size: 20px;
+}
+
+.orpf-header__div__calendar-header-prev {
+    padding-left: 5px;
+    width: 30%;
+}
+
+.orpf-header__div__calendar-header-next {
+    padding-right: 5px;
+    width: 30%;
+    text-align: -webkit-right;
+}
+
+.orpf-header__div__calendar-header-list div button {
+    color: #0072bc;
+    font-weight: 600;
+    padding-bottom: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    min-width: 80px;
+    border: none !important;
+    background: transparent;
+    outline: none;
+}
+
+:where(sc017-element) button[hidden] {
+    display: none;
+}
+
+.orpf-button__button__calendar-header-prev {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.orpf-header__div__calendar-header-prev span {
+    width: 10px;
+}
+
+.orpf-button__button__calendar-header-next {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.orpf-button__span__calendar-header-prev-icon-sc {
+    border-right: 3px solid orange;
+    border-top: 3px solid orange;
+    content: "";
+    height: 10px;
+    margin-top: 2px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    width: 10px;
+}
+
+.orpf-button__span__calendar-header-next-icon-sc {
+    border-right: 3px solid orange;
+    border-top: 3px solid orange;
+    content: "";
+    height: 10px;
+    margin-top: 2px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+}
+
+.orpf-header__div__calendar-header-list div {
+    color: #0072bc;
+    font-size: 20px;
+}
+
+.orpf-header__div__calendar-header-info {
+    width: 40%;
+    text-align: center;
+}
+
+.orpf-card__div__calendar-content {
+    margin: 0 16px 50px;
+
+}
+
+.orpf-table__table__calendar-content {
+    border: 1px solid #f5f5f5;
+    font-family: Noto Sans JP, YuGothic, YuGothicM, メイリオ, Meiryo, sans-serif;
+    font-weight: 500;
+    width: 100%;
+    table-layout: fixed;
+    line-height: 1.6;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.orpf-table-cell__th__calendar-header:first-child {
+    width: 30%;
+}
+
+.orpf-table-cell__th__calendar-header-normal,
+.orpf-table-cell__th__calendar-header {
+    border: 1px solid #f5f5f5;
+    background-color: #fff;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 10px 6px;
+    font-size: 18px;
+    color: #000;
+}
+
+.orpf-table-cell__th__calendar-header-normal--saturday,
+.orpf-table-cell__th__calendar-header-saturday,
+.orpf-table-cell__th__calendar-header--normal.orpf-table-cell__th__calendar-header--saturday {
+    color: #3e77f3;
+}
+
+.orpf-table-cell__th__calendar-day-saturday,
+.orpf-table-cell__th__calendar-weekday-saturday,
+.orpf-badge__div__calendar-day-saturday,
+.orpf-card__div__calendar-date-saturday {
+    color: #3e77f3;
+}
+
+.orpf-table-cell__th__calendar-header-normal--sunday,
+.orpf-table-cell__th__calendar-header-sunday,
+.orpf-table-cell__th__calendar-header-normal--holiday,
+.orpf-table-cell__th__calendar-header-holiday,
+.orpf-table-cell__th__calendar-header--normal.orpf-table-cell__th__calendar-header--sunday,
+.orpf-table-cell__th__calendar-header--normal.orpf-table-cell__th__calendar-header--holiday {
+
+    color: #d0525a;
+}
+
+.orpf-table-cell__th__calendar-day-sunday,
+.orpf-table-cell__th__calendar-weekday-sunday,
+.orpf-badge__div__calendar-day-sunday,
+.orpf-card__div__calendar-date-sunday,
+.orpf-badge__div__calendar-day-holiday,
+.orpf-card__div__calendar-date-holiday {
+    color: #d0525a;
+}
+
+.orpf-table-cell__th__calendar-timezone,
+.orpf-table-cell__th__calendar-detail {
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 350;
+    position: relative;
+    border: 1px solid #f5f5f5;
+    background-clip: padding-box;
+    line-height: 1.6;
+}
+
+.orpf-table-cell__td__calendar-timezone--selected,
+.orpf-table-cell__td__calendar-detail-circle--selected {
+    background-color: #b0d0e67a;
+}
+
+.orpf-table-cell__td__calendar-timezone--circle img,
+.orpf-table-cell__td__calendar-detail-circle img,
+.orpf-img__img__calendar-detail-circle {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.orpf-header__div__calendar-com-header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #0072bc;
+}
+
+.orpf-header__span__calendar-header-left {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.orpf-button__button__calendar-header-button.orpf-button__button__calendar-header-button--hidden {
+    display: none;
+}
+
+.orpf-button__span__calendar-header-prev-icon {
+    border-right: 3px solid orange;
+    border-top: 3px solid orange;
+    content: "";
+    height: 10px;
+    margin-top: 5px;
+    margin-left: 7px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    width: 10px;
+}
+
+.orpf-header__span__calendar-center,
+.orpf-header__span__calendar-header-center {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #0072bc;
+}
+
+.orpf-card__div__calendar-body {
+    width: 100%;
+    height: 85%;
+}
+
+.orpf-table__table__calendar {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.orpf-card__div__calendar-date-rectangle.orpf-card__div__calendar-date-rectangle--active {
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid white;
+}
+
+.orpf-table__table__calendar th,
+.orpf-table-cell__th__calendar-header-cell {
+    border: 1px solid #eeeeee;
+    background-color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 120%;
+    font-weight: 700;
+    font-weight: 600;
+    line-height: 1.364;
+    height: 50px;
+    cursor: pointer;
+}
+
+.orpf-badge__div__calendar-date.orpf-table-cell__td__calendar-day--selected,
+.orpf-card__div__calendar-date-rectangle.orpf-card__div__calendar-date-rectangle--selected {
+    cursor: pointer;
+    background-color: #bee8f5;
+    border: 2px solid #51afcc;
+}
+
+.orpf-table__table__calendar td,
+.orpf-table-cell__td__calendar-body-cell {
+    border: 1px solid #eeeeee;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+}
+
+.orpf-badge__div__calendar-date.orpf-table-cell__td__calendar-day--disabled,
+.orpf-card__div__calendar-date-rectangle.orpf-card__div__calendar-date-rectangle--disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #e0e0e0;
+}
+
+.orpf-badge__div__calendar-date,
+.orpf-card__div__calendar-date-rectangle {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1.4 / 1;
+    max-height: 60px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-size: 120%;
+}
+
+/* ------------廃止---------------- */
+/* お客さま情報入力画面 */
+#orpf_id-customer-id-form-group__div {
+    display: flex;
+    margin-bottom: 87px;
+}
+
+#orpf_id-customer-id-type-dropdown__div {
+    flex-shrink: 0;
+    width: auto;
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+
+}
+
+#orpf_id-customer-id-type__select {
+    cursor: pointer;
+    color: #333;
+    border: 2px solid #0072bc;
+    background: linear-gradient(to right, #f2faff calc(100% - 40px), #0072bc calc(100% - 40px));
+    pointer-events: auto;
+}
+
+#orpf_id-customer-id-type-dropdown__div:after {
+    border: 2px solid #fff;
+    border-bottom: 0;
+    border-left: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 11px;
+    left: 90%;
+    line-height: 1;
+    position: absolute;
+    top: calc(50% - 2px);
+    transform: translateY(-50%) translateX(-50%) rotate(-225deg);
+    vertical-align: middle;
+    width: 11px;
+    cursor: pointer;
+}
+
+#orpf_id-customer-id__input {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    line-height: 2;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+#orpf_id-hikar-phone-form-group__div,
+#orpf_id-flets-light-contact-other-phone-input-container__div,
+#orpf_id-applicant-name-kana-container__div {
+    margin-bottom: 87px;
+}
+
+#orpf_id-termination-line-type__div.orpf-input-radio-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#orpf_id-termination-line-type__div .orpf-input-radio-box__label {
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    padding: 20px 24px 20px 48px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* #orpf_id-termination-line-type__div .orpf-input-radio-box__label:before {
+    left: 20px;
+}
+
+#orpf_id-termination-line-type__div .orpf-input-radio-box-container:has(> input.orpf-input-radio-box__input:checked) .orpf-input-radio-box__label:after {
+    left: 23.5px;
+} */
+
+/* ------------廃止---------------- */
+/* 廃止希望日画面 */
+.orpf-form__p__note-text,
+.orpf-div__text {
+    margin-left: 16px;
+}
+
+.orpf-div__pulldown-box {
+    --text-gray-color1: #6c6c6c;
+    border-radius: 8px;
+    margin-bottom: var(--margin-bottom);
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.orpf-select__pulldown-box {
+    border: 2px solid #0072bc;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    box-sizing: border-box;
+    cursor: pointer;
+    line-height: 1;
+    padding: 16px 10px;
+    width: 100%;
+    appearance: none;
+    outline: none !important;
+}
+
+.orpf-div__pulldown-box:before {
+    content: "";
+    display: block;
+    background-color: #0072bc;
+    border-radius: 0 8px 8px 0;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.orpf-div__pulldown-box:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 2px solid #fff;
+    border-bottom: 0;
+    border-left: 0;
+    width: 11px;
+    height: 11px;
+    box-sizing: border-box;
+    right: 15px;
+    left: auto;
+    top: 45%;
+    -webkit-transform: translateY(-50%) rotate(135deg);
+    transform: translateY(-50%) rotate(135deg);
+    vertical-align: middle;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.orpf-div__calendar-selected-date {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#orpf_id-phone-continuation__radio.orpf-div__radio-box,
+#orpf_id-housing-type__radio.orpf-div__radio-box,
+#orpf_id-hikari-phone-contract__radio.orpf-div__radio-box,
+#orpf_id-hikari-phone-count__radio.orpf-div__radio-box {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#orpf_id-phone-continuation__radio .orpf-div__radio-item,
+#orpf_id-housing-type__radio .orpf-div__radio-item,
+#orpf_id-hikari-phone-contract__radio .orpf-div__radio-item,
+#orpf_id-hikari-phone-count__radio .orpf-div__radio-item {
+    margin-left: 16px;
+    margin-right: 16px;
+    flex: 1;
+    position: relative;
+}
+
+#orpf_id-phone-continuation__radio .orpf-label__radio,
+#orpf_id-housing-type__radio .orpf-label__radio,
+#orpf_id-hikari-phone-contract__radio .orpf-label__radio,
+#orpf_id-hikari-phone-count__radio .orpf-label__radio {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 55px;
+    position: relative;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+#orpf_id-phone-continuation__radio .orpf-label__radio:before,
+#orpf_id-housing-type__radio .orpf-label__radio:before,
+#orpf_id-hikari-phone-contract__radio .orpf-label__radio:before,
+#orpf_id-hikari-phone-count__radio .orpf-label__radio:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 20px;
+    position: absolute;
+    top: 22px;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#orpf_id-phone-continuation__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio:after,
+#orpf_id-housing-type__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio:after,
+#orpf_id-hikari-phone-contract__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio:after,
+#orpf_id-hikari-phone-count__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio:after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    width: 9px;
+    height: 9px;
+    top: 27px;
+    left: 25px;
+    position: absolute;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    z-index: 3;
+}
+
+#orpf_id-phone-continuation__radio .orpf-label__radio:hover,
+#orpf_id-housing-type__radio .orpf-label__radio:hover,
+#orpf_id-hikari-phone-contract__radio .orpf-label__radio:hover,
+#orpf_id-hikari-phone-count__radio .orpf-label__radio:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+#orpf_id-phone-continuation__radio .orpf-label__radio:hover:before,
+#orpf_id-housing-type__radio .orpf-label__radio:hover:before,
+#orpf_id-hikari-phone-contract__radio .orpf-label__radio:hover:before,
+#orpf_id-hikari-phone-count__radio .orpf-label__radio:hover:before {
+    border-color: #0072bc;
+}
+
+#orpf_id-phone-continuation__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio,
+#orpf_id-housing-type__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio,
+#orpf_id-hikari-phone-contract__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio,
+#orpf_id-hikari-phone-count__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+#orpf_id-phone-continuation__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio:before,
+#orpf_id-housing-type__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio:before,
+#orpf_id-hikari-phone-contract__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio:before,
+#orpf_id-hikari-phone-count__radio .orpf-div__radio-item:has(> input[type="radio"]:checked) .orpf-label__radio:before {
+    border-color: #0072bc;
+}
+
+
+#orpf_id-building-demolition__div,
+#orpf_id-service-switch__div {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 50px;
+}
+
+#orpf_id-phone-continuation__radio .orpf-label__radio {
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    padding: 20px 0 20px 48px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#orpf_id-hikari-phone-number__div .orpf-div__group,
+#orpf_id-new-phone-number__div .orpf-div__group {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.orpf-form .orpf-div__group input {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    line-height: 1.5;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+.orpf-div__group .orpf-span__separator {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    line-height: 1;
+}
+
+#orpf_id-guidance-message__radio.orpf-div__radio-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 16px 30px;
+}
+
+#orpf_id-guidance-message__radio .orpf-div__radio-item {
+    width: 100%;
+    position: relative;
+    margin-top: -2px;
+}
+
+#orpf_id-guidance-message__radio .orpf-div__radio-item:first-child {
+    margin-top: 0;
+}
+
+#orpf_id-guidance-message__radio .orpf-label__radio {
+    border-top: 1px solid #adadad;
+    border-bottom: 1px solid #adadad;
+    border-radius: 0;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 16px 20px 16px 56px;
+    position: relative;
+    background-color: #ffffff;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#orpf_id-guidance-message__radio .orpf-label__radio:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: border-color .2s ease;
+    transition: border-color .2s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#orpf_id-guidance-message__radio .orpf-label__radio:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+    z-index: 2;
+}
+
+#orpf_id-guidance-message__radio .orpf-label__radio:hover:before {
+    border-color: #0072bc;
+}
+
+#orpf_id-guidance-message__radio .orpf-div__radio-item:has(> input.orpf-input__radio:checked) .orpf-label__radio {
+    border-color: #0072bc;
+    background-color: #f2faff;
+    z-index: 3;
+}
+
+#orpf_id-guidance-message__radio .orpf-div__radio-item:has(> input.orpf-input__radio:checked) .orpf-label__radio:before {
+    border-color: #0072bc;
+}
+
+#orpf_id-guidance-message__radio .orpf-div__radio-item:has(> input.orpf-input__radio:checked) .orpf-label__radio:after {
+    content: "";
+    position: absolute;
+    background: #0072bc;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    left: 24px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 4;
+    pointer-events: none;
+}
+
+/* ------------廃止---------------- */
+/* 工事希望日選択画面 */
+.orpf-table-cell__td__calendar-timezone {
+    border: 1px solid #f5f5f5;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ------------廃止---------------- */
+/* 配送画面 */
+.sc019 .orpf-input-radio-box {
+    --text-gray-color1: #6c6c6c;
+    --margin-bottom: 20px;
+    --margin-bottom-sp: 20px;
+    margin-bottom: var(--margin-bottom);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sc019 .orpf-input-radio-box .orpf-input-radio-box-container {
+    margin-left: 15px;
+    margin-right: 15px;
+    flex: 1;
+}
+
+.sc019 .orpf-input-radio-box__label {
+    border: 2px solid #adadad;
+    border-radius: 8px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.32;
+    padding: 20px 20px 20px 55px;
+    position: relative;
+    background-color: #fff;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.sc019 .orpf-input-radio-box__label:before {
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 20px;
+    position: absolute;
+    top: 22px;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.sc019 .orpf-input-radio-box__input:checked+label:after {
+    background: #0072bc;
+    border-radius: 50%;
+    content: "";
+    width: 9px;
+    height: 9px;
+    top: 27px;
+    left: 25px;
+    position: absolute;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+
+.sc019 .orpf-input-radio-box__label:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.sc019 .orpf-input-radio-box__label:hover:before {
+    border-color: #0072bc;
+}
+
+.sc019 .orpf-input-radio-box__input:checked+label {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+#orpf_id-delivery-address-and-name-other-show__div[hidden],
+#orpf_id-delivery-address-and-name-other-show__div[hidden=""] {
+    display: none;
+}
+
+.orpf-input-show-box .orpf-input-text__label {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+.orpf-input-show-box .orpf-input-text__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    line-height: 1.5;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+/* ------------廃止---------------- */
+/* 申込内容画面 */
+#orpf_id-app-abolish-info-attention-top-detail__div {
+    display: block;
+    margin-top: 15px;
+}
+
+#orpf_id-app-abolish-info-attention-top-detail__div p:first-of-type {
+    display: block;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.7;
+    color: #000;
+}
+
+#orpf_id-app-abolish-info-attention-top-detail__div p:last-of-type {
+    padding-bottom: 16px;
+    margin: 0;
+    color: #000;
+    font-weight: 400;
+}
+
+.orpf-div__sub-category #orpf_id-app-abolish-info-customer-area__div,
+.orpf-div__sub-category #orpf_id-app-abolish-info-construction-area__div,
+.orpf-div__sub-category #orpf_id-app-abolish-info-cancellation-area__div,
+.orpf-div__sub-category #orpf_id-app-abolish-info-recovery-area__div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.orpf-div__sub-category .orpf-div__confirm-area-title {
+    color: #004979;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 100%;
+    display: block;
+}
+
+.orpf-div__sub-category .orpf-div__confirm-area-content {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.orpf-div__sub-category .orpf-div__confirm-area-content .orpf-div__cell-wrapper {
+    display: flex;
+    line-height: 1.6;
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.orpf-div__sub-category .orpf-div__confirm-area-content .orpf-div__cell-title {
+    font-weight: 700;
+    text-align: left;
+    border-left: 2px solid #EAEDEF;
+    border-right: 2px solid #EAEDEF;
+    border-top: 2px solid #EAEDEF;
+    border-bottom: 2px solid #EAEDEF;
+    background-color: #EAEDEF;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-top: -2px;
+}
+
+.orpf-div__sub-category .orpf-div__confirm-area-content .orpf-div__cell-content {
+    border-left: 2px solid #EAEDEF;
+    border-right: 2px solid #EAEDEF;
+    border-top: 2px solid #EAEDEF;
+    border-bottom: 2px solid #EAEDEF;
+    background-color: #FFFFFF;
+    display: table-cell;
+    width: 60%;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-top: -2px;
+}
+
+#orpf_id-app-abolish-info-update__a__termination-date,
+#orpf_id-app-abolish-info-update__a__construction-date {
+    margin-bottom: 0;
+}
+
+#orpf_id-app-abolish-info-attention-bottom__div .orpf-div__item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+#orpf_id-app-abolish-info-attention-bottom__div .orpf-div__item span:last-child {
+    font-size: 14px;
+    font-weight: bold;
+    flex: 1;
+}
+
+#orpf_id-app-abolish-info-construction-area__div__links {
+    padding: 8px;
+    text-align: right;
+}
+
+#orpf_id-app-abolish-info-construction-area__div__links {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    width: 100%;
+}
+
+#orpf_id-app-abolish-info-update__a__termination-date {
+    display: inline-block;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+#orpf_id-app-abolish-info-update__a__termination-date:before,
+#orpf_id-app-abolish-info-update__a__construction-date:before,
+#orpf_id-app-abolish-info-update__a__termination:before {
+    border-bottom: 2px solid #0072bc;
+    border-left: 2px solid #0072bc;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 8px;
+    left: 15px;
+    margin: auto;
+    position: absolute;
+    top: 2px;
+    transform: rotate(45deg);
+    width: 8px;
+}
+
+/* ------------廃止---------------- */
+/* モーダル */
+.orpf-div__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000080;
+    z-index: 1000;
+}
+
+.orpf-div__modal {
+    background: #fff;
+    box-shadow: 0 10px 40px #0000004d;
+    overflow: hidden;
+    padding: 30px 100px;
+    background-color: #fff;
+}
+
+#orpf_id-construction-clear-modal-body__div.orpf-div__body p {
+    font-size: 0;
+    visibility: hidden;
+}
+
+#orpf_id-construction-clear-modal-body__div.orpf-div__body p::before {
+    content: "現在の廃止希望日より後の日付が選択されたため、\A 工事希望日がクリアされる場合がありますがよろしいですか。";
+    visibility: visible;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    display: block;
+    white-space: pre-wrap;
+    margin-bottom: 25px;
+}
+
+#orpf_id-loading-dialog-message-content__div {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+#orpf_id-construction-clear-modal-header__div.orpf-div__header {
+    appearance: none;
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+}
+
+.orpf-div__footer,
+.orpf-modal__div__loading-dialog-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#orpf_id-dialog-content__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#orpf_id-construction-clear-modal-yes__button,
+#orpf_id-construction-clear-modal-no__button,
+.orpf-form__button--gray {
+    min-width: 120px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    text-decoration: none;
+}
+
+#orpf_id-construction-clear-modal-yes__button {
+    background: orange;
+}
+
+#orpf_id-construction-clear-modal-no__button,
+.orpf-form__button--gray {
+    background: #666;
+}
+
+/* ------------廃止インラインCSS---------------- */
+/* カレンダー部分 */
+#orpf_id-calendar-com-header__div {
+    -webkit-box-pack: justify;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.orpf-header__span__calendar-header-left {
+    display: flex;
+    width: 30%;
+    justify-content: flex-start;
+}
+
+.orpf-header__span__calendar-header-center {
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+    color: #0072bc;
+}
+
+.orpf-header__span__calendar-header-right {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+button[id*="orpf_id-calendar-header-button__button__"] {
+    color: #0072bc;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 6px 16px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#orpf_id-calendar-header-next-icon__span {
+    border-right: 3px solid orange;
+    border-top: 3px solid orange;
+    content: "";
+    height: 10px;
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+    vertical-align: middle;
+}
+
+
+/* ↓ここから */
+.orpf-card-main-container {
+    background-color: #ffffff;
+    border: 2px solid #adadad;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 930px;
+    margin: 30px auto;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #222222;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+}
+
+.orpf-card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.orpf-card-description {
+    font-size: 1.4rem;
+    line-height: 1.65;
+    margin-bottom: 30px;
+}
+
+.orpf-sub-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.orpf-options-row {
+    margin-bottom: 35px;
+}
+
+.orpf-combine-select-card-box {
+    display: inline-block;
+    border: 2px solid #adadad;
+    background-color: #ffffff;
+    border-radius: 12px;
+    width: 450px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+
+.orpf-combine-select-card-box:has(.orpf-custom-checkbox:checked) {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.orpf-checkbox-label-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 36px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.orpf-checkbox-label-header::before {
+    content: "";
+    display: block;
+    background-color: #ffffff;
+    border: 2px solid #adadad;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.orpf-checkbox-label-header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 45%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 6px;
+    height: 10px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    display: none;
+}
+
+.orpf-combine-select-card-box:hover {
+    border-color: #0072bc;
+    background-color: #f2faff;
+}
+
+.orpf-checkbox-label-header:hover:before {
+    border-color: #0072bc;
+}
+
+.orpf-custom-checkbox:checked+.orpf-checkbox-label-header::before {
+    background-color: #0072bc;
+    border-color: #0072bc;
+}
+
+.orpf-custom-checkbox:checked+.orpf-checkbox-label-header::after {
+    display: block;
+}
+
+.orpf-label-left-text {
+    display: inline-flex;
+    align-items: center;
+}
+
+.orpf-tooltip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0072bc;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 1.1rem;
+    margin-left: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.orpf-custom-checkbox:checked+.orpf-checkbox-label-header .orpf-tooltip-icon {
+    background-color: #0072bc;
+}
+
+
+
+.orpf-tooltip-icon:hover .orpf-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.orpf-full-width-select-container {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 0;
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: height 0.25s ease, margin-top 0.25s ease, opacity 0.2s ease;
+}
+
+.orpf-custom-checkbox:checked~.orpf-full-width-select-container {
+    height: 48px;
+    margin-top: 14px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.orpf-custom-select {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0072bc;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0 55px 0 16px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.orpf-full-width-select-container::before {
+    content: "";
+    display: block;
+    background-color: #0072bc;
+    border-radius: 0;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.orpf-full-width-select-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 45%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 9px;
+    height: 9px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.orpf-price-section {
+    border-top: 1px dotted #adadad;
+    border-bottom: 1px dotted #adadad;
+    padding: 15px 0;
+    margin-bottom: 25px;
+}
+
+.orpf-price-row {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 6px 0;
+}
+
+.orpf-price-title-blue {
+    color: #0072bc;
+    font-weight: bold;
+    width: 110px;
+}
+
+.orpf-price-value-bold {
+    font-weight: bold;
+    color: #222222;
+}
+
+.orpf-info-note {
+    font-size: 1.4rem;
+    line-height: 1.65;
+    color: #333333;
+    margin-bottom: 35px;
+}
+
+.orpf-cancel-condition-box {
+    border: 1px solid #adadad;
+    padding: 20px 25px;
+    background-color: #ffffff;
+}
+
+.orpf-cancel-condition-box h4 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.orpf-cancel-condition-box p {
+    font-size: 1.35rem;
+    line-height: 1.65;
+    margin: 0;
+    white-space: normal;
+    word-break: break-all;
+}
+
+
+
+
+
+/* ==========================================================================
+全体・共通設定
+   ========================================================================== */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 1200px;
+    font-family: sans-serif;
+}
+
+h1,
+p {
+    text-align: center;
+    color: #0072bc;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+メインコンテンツ（day-card 周り）
+   ========================================================================== */
+.day-card {
+    background-color: #f2faff;
+    border: 2px solid #0072bc;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.day-title {
+    font-weight: 700;
+    color: #e6a100;
+    margin-top: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+/* 時間：デフォルト（スマホ）で横並びになるよう inline-block に変更 */
+.time {
+    display: inline-block;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    /* テキストの改行を禁止 */
+}
+
+
+/* メモ・リンク共通のスマホ向け左余白設定 */
+.memo,
+.memo_1,
+a {
+    margin-left: 35px;
+    margin-bottom: 10px;
+}
+
+.memo_fee {
+    margin-left: 45px;
+}
+
+/* 各メモ要素の固有スタイル（重複を統合） */
+.memo {
+    display: flex;
+    text-align: leftß;
+    gap: 8px;
+}
+
+/* .memo_1 {
+    color: #0072bc;
+} */
+
+.memo_fee {
+    display: flex;
+    align-items: flex-start;
+    /* 複数行時に1行目の頭に合わせる */
+    gap: 8px;
+    font-weight: 700;
+    color: #0072bc;
+}
+
+/* リンク */
+a {
+    color: #0072bc;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+a:hover {
+    color: #00568e;
+    text-decoration: underline;
+}
+
+a .bi-geo-alt-fill {
+    color: #ff6b6b;
+}
+
+/* ドット（点）のスタイル */
+.memo:before,
+.memo_fee:before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.memo:before {
+    background-color: initial;
+    /* 必要に応じて色を指定してください */
+    margin-right: 8px;
+}
+
+.memo_fee:before {
+    background-color: #0072bc;
+    margin-top: 0.6em;
+    /* 1行目の文字の高さに合わせる微調整 */
+}
+
+
+.calc-card {
+    border: 2px solid #ffbc00;
+    background-color: #fffdf6;
+    margin: 20px 0 30px;
+    padding: 15px;
+}
+
+.calc-title {
+    color: #e6a100;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: 2px dashed #fff1cc;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.calc-group {
+    display: flex;
+    flex-direction: column;
+    /* スマホでは縦並び */
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.calc-group.m-bottom-large {
+    margin-bottom: 1.5rem;
+}
+
+.calc-group label {
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.calc-group input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+.calc-group input[type="number"]:focus {
+    border-color: #ffbc00;
+    outline: none;
+}
+
+/* 計算結果ボックス */
+.calc-result-box {
+    background: #fff;
+    margin: 20px 0;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px dashed #e6a100;
+    text-align: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.result-label {
+    margin: 0;
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.result-amount {
+    margin: 4px 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ff6b6b;
+}
+
+.result-unit {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.memoInput {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+.addMemoBtn {
+    border: none;
+    border-radius: 8px;
+    padding: 0px 30px;
+    appearance: none;
+    background: #0072bc;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: max-content;
+}
+
+.memoList {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+footer {
+    text-align: center;
+    font-size: medium;
+    font-weight: 700;
+    color: #0072bc;
+    background-color: #f0f8ff;
+    width: 100%;
+    padding: 15px 0;
+}
+
+/* ==========================================================================
+メディアクエリ（PC・タブレット向けのレイアウト変更）
+   ========================================================================== */
+@media (min-width: 768px) {
+    body {
+        padding: 50px;
+        margin: 10px 40px;
+    }
+
+    .day-card {
+        padding: 20px;
+    }
+
+    .time {
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+
+    /* PC用の余白設定（重複していた下部のメディアクエリもここに統合） */
+    .memo,
+    a {
+        margin-left: 50px;
+    }
+
+    .memo_fee {
+        margin-left: 70px;
+    }
+
+    .memo_1 {
+        margin-left: 90px;
+    }
+
+    /* a {
+        margin-left: 85px;
+    } */
+
+    /* 計算カードの調整 */
+    .calc-card {
+        margin: 20px 50px 30px;
+        padding: 20px;
+    }
+
+    .calc-title {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    .calc-group {
+        flex-direction: row;
+        /* PCでは横並び */
+        align-items: center;
+        gap: 12px;
+        margin: 20px 30px 30px;
+    }
+
+    .calc-group label {
+        font-size: 1.4rem;
+        min-width: 160px;
+    }
+
+    .calc-group input[type="number"] {
+        flex: 1;
+    }
+
+    .calc-result-box {
+        margin: 20px 30px 30px;
+    }
+
+    .result-amount {
+        font-size: 2.2rem;
+    }
+
+    footer {
+        font-size: large;
+    }
+}
