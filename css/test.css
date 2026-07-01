@@ -7583,6 +7583,7 @@ ul {
 /* メモ・リンク共通のスマホ向け左余白設定 */
 .memo,
 .memo_1,
+.tel-memo,
 a {
     margin-left: 35px;
     margin-bottom: 10px;
@@ -7592,27 +7593,24 @@ a {
     margin-left: 45px;
 }
 
-/* 各メモ要素の固有スタイル（重複を統合） */
 .memo {
     display: flex;
-    text-align: leftß;
+    text-align: left;
     gap: 8px;
 }
 
-/* .memo_1 {
-    color: #0072bc;
-} */
+.tel-memo a {
+    text-decoration: underline;
+}
 
 .memo_fee {
     display: flex;
     align-items: flex-start;
-    /* 複数行時に1行目の頭に合わせる */
     gap: 8px;
     font-weight: 700;
     color: #0072bc;
 }
 
-/* リンク */
 a {
     color: #0072bc;
     text-decoration: none;
@@ -7630,7 +7628,6 @@ a .bi-geo-alt-fill {
     color: #ff6b6b;
 }
 
-/* ドット（点）のスタイル */
 .memo:before,
 .memo_fee:before {
     content: "";
@@ -7643,14 +7640,12 @@ a .bi-geo-alt-fill {
 
 .memo:before {
     background-color: initial;
-    /* 必要に応じて色を指定してください */
     margin-right: 8px;
 }
 
 .memo_fee:before {
     background-color: #0072bc;
     margin-top: 0.6em;
-    /* 1行目の文字の高さに合わせる微調整 */
 }
 
 
@@ -7674,7 +7669,7 @@ a .bi-geo-alt-fill {
 .calc-group {
     display: flex;
     flex-direction: column;
-    /* スマホでは縦並び */
+    align-items: center;
     gap: 8px;
     margin: 15px 0;
 }
@@ -7707,7 +7702,6 @@ a .bi-geo-alt-fill {
     outline: none;
 }
 
-/* 計算結果ボックス */
 .calc-result-box {
     background: #fff;
     margin: 20px 0;
@@ -7785,9 +7779,6 @@ footer {
     padding: 15px 0;
 }
 
-/* ==========================================================================
-メディアクエリ（PC・タブレット向けのレイアウト変更）
-   ========================================================================== */
 @media (min-width: 768px) {
     body {
         padding: 50px;
@@ -7803,7 +7794,6 @@ footer {
         margin-bottom: 0;
     }
 
-    /* PC用の余白設定（重複していた下部のメディアクエリもここに統合） */
     .memo,
     a {
         margin-left: 50px;
@@ -7817,11 +7807,6 @@ footer {
         margin-left: 90px;
     }
 
-    /* a {
-        margin-left: 85px;
-    } */
-
-    /* 計算カードの調整 */
     .calc-card {
         margin: 20px 50px 30px;
         padding: 20px;
@@ -7834,7 +7819,6 @@ footer {
 
     .calc-group {
         flex-direction: row;
-        /* PCでは横並び */
         align-items: center;
         gap: 12px;
         margin: 20px 30px 30px;
@@ -7859,5 +7843,64 @@ footer {
 
     footer {
         font-size: large;
+    }
+
+    .memo-form-group {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .memoInput {
+        flex: 1;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .addMemoBtn {
+        flex-shrink: 0;
+        padding: 0 16px;
+        min-height: 40px;
+        cursor: pointer;
+        white-space: nowrap;
+        box-sizing: border-box;
+        background-color: #0076a3;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    .memoList {
+        margin-top: 20px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .memoList li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px dashed #ccc;
+    }
+
+    .memoList li span {
+        font-size: 14px;
+        color: #333;
+        word-break: break-all;
+        padding-right: 10px;
+    }
+
+    .memoList li button {
+        background: none;
+        border: none;
+        color: #e05a5a;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 0 5px;
+        flex-shrink: 0;
     }
 }
