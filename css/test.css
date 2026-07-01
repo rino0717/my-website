@@ -7733,6 +7733,14 @@ a .bi-geo-alt-fill {
     font-weight: 600;
 }
 
+.memo-form-group {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .memoInput {
     appearance: none;
     background-color: #fff;
@@ -7767,6 +7775,31 @@ a .bi-geo-alt-fill {
     margin-top: 20px;
     padding: 0;
     list-style: none;
+}
+
+.memoList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.memoList li span {
+    font-size: 14px;
+    color: #333;
+    word-break: break-all;
+    padding-right: 10px;
+}
+
+.memoList li button {
+    background: none;
+    border: none;
+    color: #e05a5a;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 5px;
+    flex-shrink: 0;
 }
 
 footer {
@@ -7843,64 +7876,5 @@ footer {
 
     footer {
         font-size: large;
-    }
-
-    .memo-form-group {
-        display: flex !important;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .memoInput {
-        flex: 1;
-        min-width: 0;
-        box-sizing: border-box;
-    }
-
-    .addMemoBtn {
-        flex-shrink: 0;
-        padding: 0 16px;
-        min-height: 40px;
-        cursor: pointer;
-        white-space: nowrap;
-        box-sizing: border-box;
-        background-color: #0076a3;
-        color: #ffffff;
-        border: none;
-        border-radius: 4px;
-        font-weight: bold;
-    }
-
-    .memoList {
-        margin-top: 20px;
-        padding: 0;
-        list-style: none;
-    }
-
-    .memoList li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-        border-bottom: 1px dashed #ccc;
-    }
-
-    .memoList li span {
-        font-size: 14px;
-        color: #333;
-        word-break: break-all;
-        padding-right: 10px;
-    }
-
-    .memoList li button {
-        background: none;
-        border: none;
-        color: #e05a5a;
-        cursor: pointer;
-        font-size: 16px;
-        padding: 0 5px;
-        flex-shrink: 0;
     }
 }
