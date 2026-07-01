@@ -7599,9 +7599,9 @@ a {
     gap: 8px;
 }
 
-.memo_1 {
+/* .memo_1 {
     color: #0072bc;
-}
+} */
 
 .memo_fee {
     display: flex;
@@ -7653,9 +7653,7 @@ a .bi-geo-alt-fill {
     /* 1行目の文字の高さに合わせる微調整 */
 }
 
-/* ==========================================================================
-計算カード（calc-card 周り）
-   ========================================================================== */
+
 .calc-card {
     border: 2px solid #ffbc00;
     background-color: #fffdf6;
@@ -7741,7 +7739,42 @@ a .bi-geo-alt-fill {
     font-weight: 600;
 }
 
-/* フッター */
+.memoInput {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #222;
+    display: block;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+.addMemoBtn {
+    border: none;
+    border-radius: 8px;
+    padding: 0px 30px;
+    appearance: none;
+    background: #0072bc;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: max-content;
+}
+
+.memoList {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
 footer {
     text-align: center;
     font-size: medium;
@@ -7772,17 +7805,21 @@ footer {
 
     /* PC用の余白設定（重複していた下部のメディアクエリもここに統合） */
     .memo,
+    a {
+        margin-left: 50px;
+    }
+
     .memo_fee {
-        margin-left: 90px;
+        margin-left: 70px;
     }
 
     .memo_1 {
         margin-left: 90px;
     }
 
-    a {
+    /* a {
         margin-left: 85px;
-    }
+    } */
 
     /* 計算カードの調整 */
     .calc-card {
